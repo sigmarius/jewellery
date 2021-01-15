@@ -1,0 +1,60 @@
+/* poppins-regular - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Poppins"),
+    url("../fonts/poppins-v15-latin-regular.woff2") format("woff2"),
+    url("../fonts/poppins-v15-latin-regular.woff") format("woff");
+}
+/* poppins-500 - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Poppins"),
+    url("../fonts/poppins-v15-latin-500.woff2") format("woff2"),
+    url("../fonts/poppins-v15-latin-500.woff") format("woff");
+}
+/* poppins-700 - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Poppins"),
+    url("../fonts/poppins-v15-latin-700.woff2") format("woff2"),
+    url("../fonts/poppins-v15-latin-700.woff") format("woff");
+}
+/* cormorant-garamond-italic - latin */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Cormorant Garamond"),
+    url("../fonts/cormorant-garamond-v9-latin-italic.woff2") format("woff2"),
+    url("../fonts/cormorant-garamond-v9-latin-italic.woff") format("woff");
+}
+/* cormorant-garamond-600 - latin */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Cormorant Garamond"),
+    url("../fonts/cormorant-garamond-v9-latin-600.woff2") format("woff2"),
+    url("../fonts/cormorant-garamond-v9-latin-600.woff") format("woff");
+}
+/* cormorant-garamond-700 - latin */
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Cormorant Garamond"),
+    url("../fonts/cormorant-garamond-v9-latin-700.woff2") format("woff2"),
+    url("../fonts/cormorant-garamond-v9-latin-700.woff") format("woff");
+}

@@ -1,0 +1,16 @@
+@mixin clear-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin clear-content ($margin-bottom) {
+  margin: 0;
+  margin-bottom: $margin-bottom;
+  padding: 0;
+}
+
+@mixin font ($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
