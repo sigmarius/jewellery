@@ -1,0 +1,21 @@
+.form--search {
+  input {
+    @include font(14px, 21px);
+    font-family: $main-font;
+    border: none;
+    border-radius: 0;
+    appearance: none;
+
+    &::placeholder {
+      color: $grey;
+    }
+
+    &:focus {
+      outline-color: $brown;
+    }
+  }
+
+  label {
+    padding-right: 10px;
+  }
+}

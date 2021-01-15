@@ -399,3 +399,106 @@ a {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden; }
+
+.wrapper {
+  max-width: 1170px;
+  min-width: 1024px;
+  margin: 0 auto; }
+  @media (min-width: 1024px) and (max-width: 1365px) {
+    .wrapper {
+      padding: 0 20px; } }
+
+.page-header a {
+  color: #1d1613; }
+  .page-header a:hover, .page-header a:focus {
+    color: #a87b62;
+    outline-color: #a87b62; }
+  .page-header a:active {
+    color: #a87b62;
+    opacity: 0.6; }
+
+.page-header__wrapper {
+  position: relative;
+  padding-top: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.page-header__toggle {
+  display: none; }
+
+.page-header__logo {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+  .page-header__logo svg {
+    fill: #a87b62; }
+
+.page-header__login {
+  font-size: 14px;
+  line-height: 21px;
+  margin-right: 80px; }
+
+.page-header__cart {
+  font-size: 14px;
+  line-height: 21px;
+  position: absolute;
+  top: 42px;
+  right: 0; }
+  .page-header__cart svg {
+    display: none; }
+
+.page-header__nav {
+  width: 100%;
+  margin-top: 69px; }
+
+.page-header__site-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .page-header__site-menu li:not(:last-child) {
+    margin-right: 36px; }
+  .page-header__site-menu--about {
+    display: none; }
+
+.form--search input {
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Poppins", "Tahoma", "Geneva", sans-serif;
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+  .form--search input::-webkit-input-placeholder {
+    color: #9b9997; }
+  .form--search input::-moz-placeholder {
+    color: #9b9997; }
+  .form--search input:-ms-input-placeholder {
+    color: #9b9997; }
+  .form--search input::-ms-input-placeholder {
+    color: #9b9997; }
+  .form--search input::placeholder {
+    color: #9b9997; }
+  .form--search input:focus {
+    outline-color: #a87b62; }
+
+.form--search label {
+  padding-right: 10px; }

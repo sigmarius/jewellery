@@ -1,0 +1,76 @@
+.page-header {
+  a {
+    color: $dark;
+
+    &:hover,
+    &:focus {
+      color: $brown;
+      outline-color: $brown;
+    }
+
+    &:active {
+      color: $brown;
+      opacity: 0.6;
+    }
+  }
+}
+
+.page-header__wrapper {
+  position: relative;
+  padding-top: 42px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.page-header__toggle {
+  display: none;
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  svg {
+    fill: $brown;
+  }
+}
+
+.page-header__login {
+  @include font(14px, 21px);
+  margin-right: 80px;
+}
+
+.page-header__cart {
+  @include font(14px, 21px);
+  position: absolute;
+  top: 42px;
+  right: 0;
+
+  svg {
+    display: none;
+  }
+}
+
+.page-header__nav {
+  width: 100%;
+  margin-top: 69px;
+}
+
+.page-header__site-menu {
+  @include clear-list;
+  @include font(16px, 24px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  li:not(:last-child) {
+    margin-right: 36px;
+  }
+
+  &--about {
+    display: none;
+  }
+}
