@@ -1,0 +1,13 @@
+.page-content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+
+  @media (max-width: $tablet) {
+    margin-top: 126px; /*высота хедера для позиционирования вне потока в мобильном меню - соответствует заданной в блоке .page-header*/
+  }
+
+  @media (max-width: $mobile) {
+    margin-top: 92px; /*высота хедера для позиционирования вне потока в мобильном меню - соответствует заданной в блоке .page-header*/
+  }
+}

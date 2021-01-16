@@ -1,2 +1,3 @@
 source/js/vendor/
 gulpfile.js
+build/js
