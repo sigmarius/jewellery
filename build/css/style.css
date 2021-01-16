@@ -640,6 +640,54 @@ a {
 .form--search svg {
   fill: #000000; }
 
+.form--email {
+  position: relative; }
+  .form--email input {
+    font-size: 14px;
+    line-height: 21px;
+    width: 100%;
+    padding: 24px 0 8px;
+    font-family: "Poppins", "Tahoma", "Geneva", sans-serif;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    border-radius: 0;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; }
+    .form--email input::-webkit-input-placeholder {
+      color: #9b9997; }
+    .form--email input::-moz-placeholder {
+      color: #9b9997; }
+    .form--email input:-ms-input-placeholder {
+      color: #9b9997; }
+    .form--email input::-ms-input-placeholder {
+      color: #9b9997; }
+    .form--email input::placeholder {
+      color: #9b9997; }
+    .form--email input:focus {
+      outline-color: rgba(255, 255, 255, 0.75); }
+  .form--email button {
+    font-size: 16px;
+    line-height: 21px;
+    position: absolute;
+    top: 23px;
+    right: 0;
+    padding: 0;
+    color: #ffffff;
+    background-color: transparent;
+    border: none; }
+    .form--email button svg {
+      stroke: #ffffff; }
+    .form--email button:hover, .form--email button:focus {
+      color: rgba(255, 255, 255, 0.75); }
+      .form--email button:hover svg, .form--email button:focus svg {
+        stroke: rgba(255, 255, 255, 0.75); }
+    .form--email button:active {
+      color: rgba(255, 255, 255, 0.75);
+      opacity: 0.6; }
+
 @media (max-width: 1023px) {
   .form--search {
     position: relative; }
@@ -686,3 +734,49 @@ a {
     .page-content {
       margin-top: 92px;
       /*высота хедера для позиционирования вне потока в мобильном меню - соответствует заданной в блоке .page-header*/ } }
+
+.page-footer {
+  min-height: 338px;
+  background-color: #000000;
+  color: #ffffff; }
+
+.page-footer__wrapper {
+  padding-top: 91px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.page-footer__subscription {
+  min-width: 500px; }
+  .page-footer__subscription h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 34px;
+    line-height: 44px;
+    font-family: "Cormorant Garamond", "Palatino Linotype", "Book Antiqua", serif;
+    font-weight: 700;
+    letter-spacing: 0.02em; }
+  .page-footer__subscription p {
+    margin: 0;
+    margin-bottom: 19px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #9b9997; }
+
+.page-footer__links-list {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+  .page-footer__links-list a {
+    color: #ffffff; }
+    .page-footer__links-list a:hover, .page-footer__links-list a:focus {
+      color: rgba(255, 255, 255, 0.75); }
+    .page-footer__links-list a:active {
+      color: rgba(255, 255, 255, 0.75);
+      opacity: 0.6; }

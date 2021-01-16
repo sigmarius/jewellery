@@ -1,0 +1,50 @@
+.page-footer {
+  min-height: 338px;
+  background-color: $black;
+  color: $white;
+}
+
+.page-footer__wrapper {
+  padding-top: 91px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer__subscription {
+  min-width: 500px;
+
+  h2 {
+    @include clear-content(10px);
+    @include font(34px, 44px);
+
+    font-family: $accent-font;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  p {
+    @include clear-content(19px);
+    @include font(16px, 21px);
+
+    font-weight: 400;
+    color: $grey;
+  }
+}
+
+.page-footer__links-list {
+  @include clear-list;
+
+  a {
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $white-light;
+    }
+
+    &:active {
+      color: $white-light;
+      opacity: 0.6;
+    }
+  }
+}

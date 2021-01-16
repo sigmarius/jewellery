@@ -24,6 +24,61 @@
   }
 }
 
+.form--email {
+  position: relative;
+
+  input {
+    @include font(14px, 21px);
+    width: 100%;
+    padding: 24px 0 8px;
+
+    font-family: $main-font;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $white;
+    border-radius: 0;
+    appearance: none;
+
+    &::placeholder {
+      color: $grey;
+    }
+
+    &:focus {
+      outline-color: $white-light;
+    }
+  }
+
+  button {
+    @include font(16px, 21px);
+    position: absolute;
+    top: 23px;
+    right: 0;
+    padding: 0;
+    color: $white;
+    background-color: transparent;
+    border: none;
+
+    svg {
+      stroke: $white;
+    }
+
+    &:hover,
+    &:focus {
+      color: $white-light;
+
+      svg {
+        stroke: $white-light;
+      }
+    }
+
+    &:active {
+      color: $white-light;
+      opacity: 0.6;
+    }
+  }
+}
+
 @media (max-width: $tablet) {
   .form--search {
     position: relative;
