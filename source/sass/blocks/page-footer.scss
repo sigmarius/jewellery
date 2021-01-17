@@ -31,10 +31,24 @@
   }
 }
 
+.page-footer__links {
+  width: 45%;
+  padding: 6px 30px 0 79px;
+}
+
 .page-footer__links-list {
   @include clear-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+    width: 43%;
+    margin-bottom: 21px;
+  }
 
   a {
+    @include font(16px, 21px);
     color: $white;
 
     &:hover,
@@ -45,6 +59,135 @@
     &:active {
       color: $white-light;
       opacity: 0.6;
+    }
+  }
+}
+
+.page-footer__social-list {
+  @include clear-list;
+  padding-top: 7px;
+}
+
+.page-footer__social-item {
+  margin-bottom: 24px;
+
+  a {
+    display: flex;
+    color: $white;
+  }
+
+  svg {
+    fill: $white;
+  }
+
+  span {
+    margin-left: 15px;
+  }
+
+  &--fb {
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .page-footer {
+    min-height: 448px;
+  }
+
+  .page-footer__wrapper {
+    padding: 52px 150px 0 44px;
+    flex-wrap: wrap;
+  }
+
+  .page-footer__subscription {
+    min-width: 100%;
+    margin-bottom: 41px;
+    padding-right: 13px;
+  }
+
+  .page-footer__links {
+    width: 79%;
+    padding: 5px 0 0 0;
+  }
+}
+
+@media (max-width: $mobile) {
+  .page-footer {
+    min-height: 773px;
+  }
+
+  .page-footer__wrapper {
+    padding: 50px 15px 0 15px;
+  }
+
+  .page-footer__subscription {
+    padding-right: 0;
+
+    h2 {
+      margin-bottom: 13px;
+    }
+  }
+
+  .page-footer__links {
+    width: 100%;
+  }
+
+  .page-footer__links-list {
+    li {
+      width: 100%;
+    }
+
+    li:nth-child(4n) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .page-footer__social {
+    width: 80%;
+  }
+
+  .page-footer__social-list {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .page-footer__social-item {
+    margin-bottom: 10px;
+
+    span {
+      display: none;
+    }
+
+    &--fb {
+      padding-left: 0;
+
+      svg {
+        width: 12px;
+        height: 21px;
+      }
+    }
+
+    &--insta {
+      svg {
+        width: 20px;
+        height: 21px;
+      }
+    }
+
+    &--pinterest {
+      svg {
+        width: 20px;
+        height: 21px;
+      }
+    }
+
+    &--twiter {
+      svg {
+        width: 20px;
+        height: 18px;
+      }
     }
   }
 }
