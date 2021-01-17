@@ -41,11 +41,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
 
-  li {
-    width: 43%;
-    margin-bottom: 21px;
-  }
+.page-footer__links-item {
+  width: 43%;
+  margin-bottom: 21px;
 
   a {
     @include font(16px, 21px);
@@ -132,13 +132,41 @@
     width: 100%;
   }
 
-  .page-footer__links-list {
-    li {
-      width: 100%;
+  .page-footer__links-item {
+    width: 100%;
+
+    &--order {
+      order: 0;
     }
 
-    li:nth-child(4n) {
+    &--terms {
+      order: 1;
+    }
+
+    &--return {
+      order: 2;
+    }
+
+    &--delivery {
       margin-bottom: 40px;
+      order: 3;
+    }
+
+    &--about {
+      order: 4;
+    }
+
+    &--stores {
+      order: 5;
+    }
+
+    &--jobs {
+      order: 6;
+    }
+
+    &--contact {
+      margin-bottom: 40px;
+      order: 7;
     }
   }
 
@@ -147,14 +175,13 @@
   }
 
   .page-footer__social-list {
-    width: 70%;
+    width: 85%;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
   }
 
   .page-footer__social-item {
-    margin-bottom: 10px;
+    margin: 0 30px 10px 0;
 
     span {
       display: none;
