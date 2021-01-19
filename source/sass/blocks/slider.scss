@@ -1,50 +1,19 @@
 .slider__wrapper {
   position: relative;
-  padding: 120px 0 147px;
+  padding-top: 120px;
+  padding-bottom: 147px;
   text-align: center;
   color: $dark;
 
   h2 {
     @include clear-content(26px);
     @include font(34px, 44px);
-
-    font-family: $accent-font;
-    font-weight: 700;
+    @include head-font(700);
   }
 }
 
 .slider__link {
-  position: relative;
-  color: $dark;
-
-  &::after {
-    position: absolute;
-    top: 21px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: $brown;
-    content: "";
-  }
-
-  &:hover,
-  &:focus {
-    color: $brown;
-    outline-color: $brown;
-
-    &::after {
-      background-color: $brown-bg;
-    }
-  }
-
-  &:active {
-    color: $brown;
-    opacity: 0.6;
-
-    &::after {
-      background-color: $dark;
-    }
-  }
+  @include head-link;
 }
 
 .slider__buttons {
@@ -160,5 +129,33 @@
     @include clear-content(0);
     @include font(14px, 18px);
     font-weight: 700;
+  }
+}
+
+@media (max-width: $tablet) {
+  .slider__wrapper {
+    padding-bottom: 60px;
+  }
+
+  .slider__item {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: $mobile) {
+  .slider__wrapper {
+    padding-top: 60px;
+  }
+
+  .slider__container {
+    margin-top: 41px;
+  }
+
+  .slider__item {
+    img {
+      width: 130px;
+      height: 136px;
+    }
   }
 }

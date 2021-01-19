@@ -14,3 +14,43 @@
   font-size: $font-size;
   line-height: $line-height;
 }
+
+@mixin head-font ($font-weight) {
+  font-family: $accent-font;
+  font-weight: $font-weight;
+  text-align: center;
+}
+
+@mixin head-link($top: 21px) {
+  position: relative;
+  color: $dark;
+
+  &::after {
+    position: absolute;
+    top: $top;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $brown;
+    content: "";
+  }
+
+  &:hover,
+  &:focus {
+    color: $brown;
+    outline-color: $brown;
+
+    &::after {
+      background-color: $brown-bg;
+    }
+  }
+
+  &:active {
+    color: $brown;
+    opacity: 0.6;
+
+    &::after {
+      background-color: $dark;
+    }
+  }
+}
