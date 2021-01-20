@@ -1,0 +1,143 @@
+.faq__wrapper {
+  margin-bottom: 90px;
+  padding-top: 31px;
+
+  h2 {
+    @include clear-content(50px);
+    @include font(34px, 44px);
+    @include head-font(700);
+    letter-spacing: 0.03em;
+    color: $dark;
+  }
+}
+
+.faq__list {
+  @include clear-list;
+  padding: 0 100px;
+}
+
+.faq__item {
+  padding: 41px 38px;
+  border: 1px solid $brown;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    border-bottom: none;
+  }
+
+  &:hover,
+  &:focus-within {
+    background-color: $brown-light;
+  }
+
+  button {
+    @include font(18px, 23px);
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+
+    display: block;
+    text-align: left;
+    color: $dark;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    &::after {
+      position: absolute;
+      right: 11px;
+      top: 0;
+      width: 15px;
+      height: 8px;
+      content: url("../img/icon-arrow-bottom.svg");
+    }
+  }
+
+  p {
+    @include clear-content(0);
+    @include font(16px, 21px);
+
+    width: 60%;
+    padding: 0 12px;
+    display: none;
+    font-weight: 400;
+    color: $dark;
+  }
+}
+
+.faq__item--open {
+  button {
+    &::after {
+      top: 18px;
+      transform: rotate(180deg);
+    }
+  }
+
+  p {
+    display: block;
+  }
+}
+
+.faq__list--nojs {
+  .faq__item p {
+    display: block;
+  }
+}
+
+@media (max-width: $tablet) {
+  .faq__wrapper {
+    padding-top: 14px;
+
+    h2 {
+      margin-bottom: 48px;
+    }
+  }
+
+  .faq__list {
+    padding: 0 45px;
+  }
+
+  .faq__item {
+    padding: 42px 43px;
+
+    button {
+      margin-bottom: 27px;
+    }
+
+    p {
+      width: 100%;
+      padding: 0 12px 0 6px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .faq__wrapper {
+    margin-bottom: 55px;
+    padding-top: 20px;
+
+    h2 {
+      margin-bottom: 28px;
+    }
+  }
+
+  .faq__list {
+    padding: 0 15px;
+  }
+
+  .faq__item {
+    padding: 15px 18px 8px;
+
+    button {
+      @include font(16px, 22px);
+      margin-bottom: 13px;
+      padding-right: 40px;
+    }
+
+    p {
+      @include font(14px, 20px);
+      padding-right: 40px;
+      margin-bottom: 10px;
+    }
+  }
+}

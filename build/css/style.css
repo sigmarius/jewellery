@@ -1351,3 +1351,110 @@ a {
     padding: 48px 60px 10px; }
     .blog__item-text time {
       margin-bottom: 12px; } }
+
+.faq__wrapper {
+  margin-bottom: 90px;
+  padding-top: 31px; }
+  .faq__wrapper h2 {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    font-size: 34px;
+    line-height: 44px;
+    font-family: "Cormorant Garamond", "Palatino Linotype", "Book Antiqua", serif;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #1d1613; }
+
+.faq__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding: 0 100px; }
+
+.faq__item {
+  padding: 41px 38px;
+  border: 1px solid #a87b62;
+  cursor: pointer; }
+  .faq__item:not(:last-child) {
+    border-bottom: none; }
+  .faq__item:hover, .faq__item:focus-within {
+    background-color: #f0eae4; }
+  .faq__item button {
+    font-size: 18px;
+    line-height: 23px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+    color: #1d1613;
+    background-color: transparent;
+    border: none;
+    outline: none; }
+    .faq__item button::after {
+      position: absolute;
+      right: 11px;
+      top: 0;
+      width: 15px;
+      height: 8px;
+      content: url("../img/icon-arrow-bottom.svg"); }
+  .faq__item p {
+    margin: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 21px;
+    width: 60%;
+    padding: 0 12px;
+    display: none;
+    font-weight: 400;
+    color: #1d1613; }
+
+.faq__item--open button::after {
+  top: 18px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.faq__item--open p {
+  display: block; }
+
+.faq__list--nojs .faq__item p {
+  display: block; }
+
+@media (max-width: 1023px) {
+  .faq__wrapper {
+    padding-top: 14px; }
+    .faq__wrapper h2 {
+      margin-bottom: 48px; }
+  .faq__list {
+    padding: 0 45px; }
+  .faq__item {
+    padding: 42px 43px; }
+    .faq__item button {
+      margin-bottom: 27px; }
+    .faq__item p {
+      width: 100%;
+      padding: 0 12px 0 6px; } }
+
+@media (max-width: 767px) {
+  .faq__wrapper {
+    margin-bottom: 55px;
+    padding-top: 20px; }
+    .faq__wrapper h2 {
+      margin-bottom: 28px; }
+  .faq__list {
+    padding: 0 15px; }
+  .faq__item {
+    padding: 15px 18px 8px; }
+    .faq__item button {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 13px;
+      padding-right: 40px; }
+    .faq__item p {
+      font-size: 14px;
+      line-height: 20px;
+      padding-right: 40px;
+      margin-bottom: 10px; } }
