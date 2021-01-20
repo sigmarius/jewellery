@@ -1353,7 +1353,7 @@ a {
       margin-bottom: 12px; } }
 
 .faq__wrapper {
-  margin-bottom: 90px;
+  margin-bottom: 104px;
   padding-top: 31px; }
   .faq__wrapper h2 {
     margin: 0;
@@ -1458,3 +1458,66 @@ a {
       line-height: 20px;
       padding-right: 40px;
       margin-bottom: 10px; } }
+
+.follow__wrapper {
+  margin-bottom: 130px;
+  text-align: center; }
+  .follow__wrapper h2 {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    font-size: 34px;
+    line-height: 44px;
+    font-family: "Cormorant Garamond", "Palatino Linotype", "Book Antiqua", serif;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #1d1613; }
+  .follow__wrapper a {
+    position: relative;
+    color: #1d1613;
+    font-size: 16px;
+    line-height: 21px; }
+    .follow__wrapper a::after {
+      position: absolute;
+      top: 27px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #a87b62;
+      content: ""; }
+    .follow__wrapper a:hover, .follow__wrapper a:focus {
+      color: #a87b62;
+      outline-color: #a87b62; }
+      .follow__wrapper a:hover::after, .follow__wrapper a:focus::after {
+        background-color: rgba(86, 64, 52, 0.7); }
+    .follow__wrapper a:active {
+      color: #a87b62;
+      opacity: 0.6; }
+      .follow__wrapper a:active::after {
+        background-color: #1d1613; }
+
+.follow__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-height: 420px;
+  margin-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: justify;
+      align-content: space-between; }
+
+.follow__item {
+  display: block; }
+  .follow__item--first {
+    margin-bottom: 27px; }
+  .follow__item--third {
+    margin: 0 15px; }

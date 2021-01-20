@@ -1,0 +1,40 @@
+.follow__wrapper {
+  margin-bottom: 130px;
+  text-align: center;
+
+  h2 {
+    @include clear-content(30px);
+    @include font(34px, 44px);
+    @include head-font(700);
+    letter-spacing: 0.03em;
+    color: $dark;
+  }
+
+  a {
+    @include head-link(27px);
+    @include font(16px, 21px);
+  }
+}
+
+.follow__list {
+  @include clear-list;
+  max-height: 420px;
+  margin-top: 64px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.follow__item {
+  display: block;
+
+  &--first {
+    margin-bottom: 27px;
+  }
+
+  &--third {
+    margin: 0 15px;
+  }
+}
