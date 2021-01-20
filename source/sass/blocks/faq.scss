@@ -86,6 +86,7 @@
 
 @media (max-width: $tablet) {
   .faq__wrapper {
+    margin-bottom: 74px;
     padding-top: 14px;
 
     h2 {
@@ -98,7 +99,11 @@
   }
 
   .faq__item {
-    padding: 42px 43px;
+    padding: 42px 43px 16px;
+
+    &:first-of-type {
+      padding: 42px 43px;
+    }
 
     button {
       margin-bottom: 27px;
@@ -113,7 +118,7 @@
 
 @media (max-width: $mobile) {
   .faq__wrapper {
-    margin-bottom: 55px;
+    margin-bottom: 58px;
     padding-top: 20px;
 
     h2 {
@@ -127,6 +132,10 @@
 
   .faq__item {
     padding: 15px 18px 8px;
+
+    &:first-of-type {
+      padding: 15px 18px 8px;
+    }
 
     button {
       @include font(16px, 22px);
