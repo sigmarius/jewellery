@@ -1,0 +1,16 @@
+.catalog__hero-wrapper {
+  margin: 0 80px 117px 0;
+}
+
+.catalog__main-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__list {
+  @include clear-list;
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
