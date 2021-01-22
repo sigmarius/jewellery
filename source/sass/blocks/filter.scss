@@ -1,0 +1,149 @@
+.filter__item {
+  margin: 0;
+  padding: 0;
+  border: 1px solid $brown;
+
+  &:not(:last-of-type) {
+    border-bottom: none;
+  }
+
+  &:last-of-type {
+    margin-bottom: 35px;
+  }
+
+  &:hover,
+  &:focus-within {
+    background-color: $brown-light;
+  }
+
+  & > button {
+    @include font(16px, 21px);
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: 23px;
+
+    font-family: $main-font;
+    font-weight: 500;
+    text-align: left;
+    color: $dark;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      right: 27px;
+      top: 22px;
+      width: 15px;
+      height: 8px;
+      content: url("../img/icon-arrow-bottom.svg");
+    }
+  }
+}
+
+.filter__list {
+  @include clear-list;
+  padding-left: 57px;
+
+  li {
+    margin-bottom: 13px;
+
+    &:last-child {
+      margin-bottom: 25px;
+    }
+  }
+
+  label {
+    @include font(14px, 18px);
+    color: $dark;
+  }
+
+  input[type="checkbox"] + label {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 2px;
+      left: -22px;
+      width: 15px;
+      height: 15px;
+      border: 1px solid $brown;
+      content: "";
+    }
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    background-color: $brown;
+  }
+}
+
+.filter__content {
+  display: none;
+}
+
+.filter__item--open {
+  .filter__content {
+    display: block;
+  }
+
+  & > button::after {
+    top: 38px;
+    transform: rotate(180deg);
+  }
+}
+
+.filter__price {
+  padding: 0 0 52px 27px;
+}
+
+.filter__price-controls {
+  position: relative;
+  width: 200px;
+  height: 1px;
+  background-color: $brown-light;
+}
+
+.filter__line-depth {
+  position: relative;
+  width: 60%;
+  height: 1px;
+  left: 42px;
+  background-color: $brown;
+}
+
+.filter__line-pin {
+  position: absolute;
+  top: -7px;
+  width: 15px;
+  height: 15px;
+  border: 0;
+  border-radius: 50%;
+  background-color: $brown;
+  cursor: pointer;
+
+  &--min {
+    left: 42px;
+  }
+
+  &--max {
+    right: 38px;
+  }
+}
+
+
+.filter__price-value {
+  @include font(14px, 18px);
+  position: absolute;
+  top: 16px;
+  color: $dark;
+
+  &--min {
+    left: 34px;
+  }
+
+  &--max {
+    right: 28px;
+  }
+}

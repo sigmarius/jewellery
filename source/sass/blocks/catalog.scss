@@ -7,6 +7,10 @@
   justify-content: space-between;
 }
 
+.catalog__form {
+  flex-basis: 252px;
+}
+
 .catalog__list {
   @include clear-list;
   width: 75%;

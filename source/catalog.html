@@ -70,10 +70,10 @@
     </div>
 
     <div class="catalog__main-wrapper wrapper">
-      <form class="catalog__form" method="GET" action="catalog.html" >
-        <fieldset>
-          <legend>Product</legend>
-          <ul class="catalog__form-list">
+      <form class="catalog__form filter filter--nojs" method="GET" action="catalog.html" >
+        <fieldset class="filter__item filter__item--open">
+          <button type="button">Product</button>
+          <ul class="filter__list filter__content">
             <li>
               <input class="visually-hidden" type="checkbox" id="necklaces" name="necklaces" checked>
               <label for="necklaces">Necklaces</label>
@@ -92,9 +92,9 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
-          <legend>Material</legend>
-          <ul class="catalog__form-list">
+        <fieldset class="filter__item">
+          <button type="button">Material</button>
+          <ul class="filter__list filter__content">
             <li>
               <input class="visually-hidden" type="checkbox" id="gold" name="gold" checked>
               <label for="gold">Gold</label>
@@ -105,9 +105,9 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
-          <legend>Collection</legend>
-          <ul class="catalog__form-list">
+        <fieldset class="filter__item">
+          <button type="button">Collection</button>
+          <ul class="filter__list filter__content">
             <li>
               <input class="visually-hidden" type="checkbox" id="pink-flamingo" name="pink-flamingo" checked>
               <label for="pink-flamingo">Pink flamingo</label>
@@ -118,22 +118,23 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
-          <legend>Price</legend>
-          <div class="catalog__form-range-controls">
-            <div class="scale">
-                <div class="bar"></div>
-            </div>
-            <button class="catalog__form-range-toggle catalog__form-range-toggle-min" type="button" aria-label="Increase"></button>
-            <button class="catalog__form-range-toggle catalog__form-range-toggle-max" type="button" aria-label="Decrease"></button>
-        </div>
-        <div class="catalog__form-price-controls">
-          <label for="min-price">$ 55</label>
-          <input id="min-price" type="number" name="min-price" min="0" max="210" value="0">
-          <label for="max-price">$ 155</label>
-          <input id="max-price" type="number" name="max-price" min="0" max="210" value="210">
-      </div>
+        <fieldset class="filter__item filter__item--open">
+          <button type="button">Price</button>
+          <div class="filter__price filter__content">
+            <div class="filter__price-controls">
+              <div class="filter__line-depth"></div>
+              <button class="filter__line-pin filter__line-pin--min" type="button" aria-label="Increase"></button>
+              <button class="filter__line-pin filter__line-pin--max" type="button" aria-label="Decrease"></button>
+
+
+              <label class="filter__price-value filter__price-value--min" for="min-price">$ 55</label>
+              <input class="visually-hidden" id="min-price" type="number" name="min-price" min="0" max="210" value="55" aria-label="Min value of the price">
+              <label class="filter__price-value filter__price-value--max" for="max-price">$ 155</label>
+              <input class="visually-hidden" id="max-price" type="number" name="max-price" min="0" max="210" value="155" aria-label="Max value of the price">
+          </div>
         </fieldset>
+        <button class="button button--brown" type="submit">Apply</button>
+        <button class="button button--white" type="reset">Clear All</button>
       </form>
 
       <ul class="catalog__list">

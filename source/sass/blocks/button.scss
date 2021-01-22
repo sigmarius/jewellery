@@ -1,0 +1,8 @@
+.button {
+  width: 100%;
+
+  &--brown {
+    color: $white;
+    background-color: $brown;
+  }
+}
