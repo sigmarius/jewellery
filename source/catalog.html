@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="Description" content="Online store of handmade jewelry made of gold and precious stones">
-  <title>Jewellery</title>
+  <title>CH Jewellery online store catalog</title>
   <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="">
@@ -58,19 +58,21 @@
   </header>
 
   <main class="page-content catalog">
+    <h1 class="visually-hidden">Catalog of unique handmade jewelry - buy with delivery</h1>
 
-    <div class="catalog__hero-wrapper">
-      <section class="hero hero--catalog">
-        <div class="hero__wrapper wrapper">
-          <h1 class="visually-hidden">Catalog of unique handmade jewelry - buy with delivery</h1>
-          <h2>All jewellery</h2>
-          <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
-        </div>
-      </section>
-    </div>
+    <section class="catalog__hero">
+      <div class="catalog__hero-wrapper wrapper">
+        <h2>All jewellery</h2>
+        <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+      </div>
+    </section>
 
     <div class="catalog__main-wrapper wrapper">
+
+      <a class="catalog__filter-button button button--brown modal-open" href="filter.html">Filter</a>
+
       <form class="catalog__form filter filter--nojs" method="GET" action="catalog.html" >
+        <button class="filter__modal-close" type="button" area-label="Close modal window"></button>
         <fieldset class="filter__item filter__item--open">
           <button type="button">Product</button>
           <ul class="filter__list filter__content">
@@ -101,7 +103,7 @@
             </li>
             <li>
               <input class="visually-hidden" type="checkbox" id="silver" name="silver" checked>
-              <label for="chokers">Silver</label>
+              <label for="silver">Silver</label>
             </li>
           </ul>
         </fieldset>

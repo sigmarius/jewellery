@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Online store of handmade jewelry made of gold and precious stones">
+  <title>CH Jewellery online store filter</title>
+  <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div style="display: none;">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+
+  <main>
+
+    <form class="filter filter--nojs" method="GET" action="catalog.html" >
+      <button class="filter__modal-close" type="button" area-label="Close modal window"></button>
+      <fieldset class="filter__item filter__item--open">
+        <button type="button">Product</button>
+        <ul class="filter__list filter__content">
+          <li>
+            <input class="visually-hidden" type="checkbox" id="necklaces" name="necklaces" checked>
+            <label for="necklaces">Necklaces</label>
+          </li>
+          <li>
+            <input class="visually-hidden" type="checkbox" id="chokers" name="chokers" checked>
+            <label for="chokers">Chokers</label>
+          </li>
+          <li>
+            <input class="visually-hidden" type="checkbox" id="rings" name="rings">
+            <label for="rings">Rings</label>
+          </li>
+          <li>
+            <input class="visually-hidden" type="checkbox" id="earrings" name="earrings" checked>
+            <label for="earrings">Earrings</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="filter__item">
+        <button type="button">Material</button>
+        <ul class="filter__list filter__content">
+          <li>
+            <input class="visually-hidden" type="checkbox" id="gold" name="gold" checked>
+            <label for="gold">Gold</label>
+          </li>
+          <li>
+            <input class="visually-hidden" type="checkbox" id="silver" name="silver" checked>
+            <label for="silver">Silver</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="filter__item">
+        <button type="button">Collection</button>
+        <ul class="filter__list filter__content">
+          <li>
+            <input class="visually-hidden" type="checkbox" id="pink-flamingo" name="pink-flamingo" checked>
+            <label for="pink-flamingo">Pink flamingo</label>
+          </li>
+          <li>
+            <input class="visually-hidden" type="checkbox" id="dreams" name="dreams" checked>
+            <label for="dreams">Dreams</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="filter__item filter__item--open">
+        <button type="button">Price</button>
+        <div class="filter__price filter__content">
+          <div class="filter__price-controls">
+            <div class="filter__line-depth"></div>
+              <button class="filter__line-pin filter__line-pin--min" type="button" aria-label="Increase"></button>
+              <button class="filter__line-pin filter__line-pin--max" type="button" aria-label="Decrease"></button>
+
+
+              <label class="filter__price-value filter__price-value--min" for="min-price">$ 55</label>
+              <input class="visually-hidden" id="min-price" type="number" name="min-price" min="0" max="210" value="55" aria-label="Min value of the price">
+              <label class="filter__price-value filter__price-value--max" for="max-price">$ 155</label>
+              <input class="visually-hidden" id="max-price" type="number" name="max-price" min="0" max="210" value="155" aria-label="Max value of the price">
+            </div>
+        </div>
+      </fieldset>
+      <button class="button button--brown" type="submit">Apply</button>
+      <button class="button button--white" type="reset">Clear All</button>
+    </form>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

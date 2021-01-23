@@ -1,10 +1,48 @@
+.catalog__hero {
+  min-height: 261px;
+  margin: 0 80px 117px -80px;
+
+  text-align: center;
+  color: $white;
+
+  background-image: url("../img/bg/hero-img-catalog-desktop@1x.jpg");
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg/hero-img-catalog-desktop@2x.jpg");
+  }
+}
+
 .catalog__hero-wrapper {
-  margin: 0 80px 117px 0;
+  padding: 130px 30px 20px 190px;
+
+  h2 {
+    @include clear-content(1px);
+    @include font(34px, 44px);
+
+    font-family: $accent-font;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  p {
+    @include clear-content(0);
+    @include font(22px, 29px);
+
+    font-family: $accent-font;
+    font-style: italic;
+    font-weight: 400;
+  }
 }
 
 .catalog__main-wrapper {
   display: flex;
   justify-content: space-between;
+}
+
+.catalog__filter-button {
+  display: none;
 }
 
 .catalog__form {
@@ -49,5 +87,84 @@
     @include font(14px, 18px);
     font-weight: 700;
     color: $dark;
+  }
+}
+
+@media (max-width: $tablet) {
+  .catalog__hero {
+    margin: 0 auto 50px;
+    background-image: url("../img/bg/hero-img-catalog-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg/hero-img-catalog-tablet@2x.jpg");
+    }
+  }
+
+  .catalog__hero-wrapper {
+    padding: 91px 30px 20px;
+  }
+
+  .catalog__main-wrapper {
+    padding: 0 45px;
+    flex-direction: column;
+  }
+
+  .catalog__filter-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .catalog__form {
+    display: none;
+  }
+
+  .catalog__list {
+    width: 100%;
+    margin-top: 25px;
+    padding-left: 0;
+  }
+
+  .catalog__item {
+    max-width: 206px;
+
+    img {
+      max-height: 208px;
+      margin-bottom: 19px;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .catalog__hero {
+    margin: 0 auto 40px;
+    background-image: url("../img/bg/hero-img-catalog-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg/hero-img-catalog-mobile@2x.jpg");
+    }
+  }
+
+  .catalog__hero-wrapper {
+    padding-top: 79px;
+  }
+
+  .catalog__main-wrapper {
+    padding: 0 15px;
+  }
+
+  .catalog__list {
+    margin-top: 15px;
+  }
+
+  .catalog__item {
+    width: 50%;
+    max-width: 130px;
+    margin-bottom: 27px;
+
+    img {
+      max-height: 136px;
+      margin-bottom: 12px;
+    }
   }
 }

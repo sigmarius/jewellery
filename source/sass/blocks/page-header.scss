@@ -264,6 +264,12 @@
 @media (max-width: $mobile) {
   .page-header {
     min-height: 92px;
+
+    &--catalog {
+      .page-header__cart {
+        top: 38px;
+      }
+    }
   }
 
   .page-header--opened {

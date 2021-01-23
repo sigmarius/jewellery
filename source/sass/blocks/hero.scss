@@ -19,10 +19,8 @@
   padding: 180px 30px 20px;
 
   h2 {
-    @include clear-content(20px);
+    @include clear-content(-5px);
     @include font(45px, 58px);
-
-    margin-bottom: -5px;
 
     font-family: $accent-font;
     font-weight: 700;
@@ -37,30 +35,6 @@
     font-family: $accent-font;
     font-style: italic;
     font-weight: 400;
-  }
-}
-
-.hero--catalog {
-  min-height: 261px;
-  background-image: url("../img/bg/hero-img-catalog-desktop@1x.jpg");
-  background-size: cover;
-  background-position: -83px 0;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg/hero-img-catalog-desktop@2x.jpg");
-  }
-
-  .hero__wrapper {
-    padding: 131px 30px 20px 113px;
-
-    h2 {
-      @include font(34px, 44px);
-      margin-bottom: 1px;
-    }
-
-    p {
-      @include font(22px, 29px);
-    }
   }
 }
 
