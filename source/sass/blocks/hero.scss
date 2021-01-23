@@ -43,7 +43,7 @@
 .hero--catalog {
   min-height: 261px;
   background-image: url("../img/bg/hero-img-catalog-desktop@1x.jpg");
-  background-size: 107%;
+  background-size: cover;
   background-position: -83px 0;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

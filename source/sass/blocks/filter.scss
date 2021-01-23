@@ -62,6 +62,7 @@
 
   input[type="checkbox"] + label {
     position: relative;
+    cursor: pointer;
 
     &::before {
       position: absolute;
@@ -121,6 +122,7 @@
   border: 0;
   border-radius: 50%;
   background-color: $brown;
+  outline-color: $brown;
   cursor: pointer;
 
   &--min {
@@ -129,6 +131,15 @@
 
   &--max {
     right: 38px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $brown-light;
+  }
+
+  &:active {
+    background-color: $brown-light;
   }
 }
 

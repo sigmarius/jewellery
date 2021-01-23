@@ -1,0 +1,43 @@
+.pagination {
+  border-top: 1px solid $line;
+}
+
+.pagination__wrapper {
+  margin-bottom: 75px;
+  padding-top: 32px;
+  padding-left: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination-list {
+  @include clear-list;
+  margin-right: 33px;
+  display: flex;
+
+  li:not(:last-child) {
+    margin-right: 13px;
+  }
+}
+
+.pagination__link {
+  @include font(16px, 21px);
+  color: $grey;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+  }
+
+  &:active,
+  &--left,
+  &--right,
+  &--active {
+    color: $dark;
+  }
+
+  &--left:active,
+  &--right:active {
+    color: $grey;
+  }
+}
