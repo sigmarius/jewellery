@@ -26,7 +26,8 @@
     }
   }
 
-  &--catalog {
+  &--catalog,
+  &--card {
     &::after {
       top: 125px;
     }
@@ -38,6 +39,12 @@
 
     .page-header__cart {
       top: 53px;
+    }
+  }
+
+  &--card {
+    &::after {
+      box-shadow: 0 61px 0 0 $line;
     }
   }
 }
@@ -265,7 +272,8 @@
   .page-header {
     min-height: 92px;
 
-    &--catalog {
+    &--catalog,
+    &--card {
       .page-header__cart {
         top: 38px;
       }

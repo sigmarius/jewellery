@@ -132,6 +132,13 @@
   }
 }
 
+.slider--card {
+  .slider__wrapper {
+    padding-top: 90px;
+    padding-bottom: 198px;
+  }
+}
+
 @media (max-width: $tablet) {
   .slider__wrapper {
     padding-top: 70px;
@@ -193,6 +200,13 @@
       h3 {
         margin-bottom: 11px;
       }
+    }
+  }
+
+  .slider--card {
+    .slider__wrapper {
+      padding-top: 56px;
+      padding-bottom: 138px;
     }
   }
 }
