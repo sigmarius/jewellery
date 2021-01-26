@@ -614,6 +614,8 @@ a {
 @media (max-width: 767px) {
   .page-header {
     min-height: 92px; }
+    .page-header--card .page-header__wrapper {
+      padding-bottom: 55px; }
     .page-header--catalog .page-header__cart, .page-header--card .page-header__cart {
       top: 38px; }
   .page-header--opened.page-header {
@@ -759,6 +761,9 @@ a {
     .page-content {
       margin-top: 92px;
       /*высота хедера для позиционирования вне потока в мобильном меню - соответствует заданной в блоке .page-header*/ } }
+  .page-content--filter {
+    margin-top: 0;
+    padding: 0 25px; }
 
 .page-footer {
   min-height: 338px;
@@ -1197,7 +1202,10 @@ a {
   .slider__item:first-of-type {
     padding-left: 0; }
     .slider__item:first-of-type h3 {
-      margin-bottom: 5px; } }
+      margin-bottom: 5px; }
+  .slider--card .slider__wrapper {
+    padding-top: 36px;
+    padding-bottom: 114px; } }
 
 .blog__wrapper {
   padding-top: 41px;
@@ -1993,8 +2001,6 @@ a {
       right: 53px; } }
 
 @media (max-width: 767px) {
-  main {
-    padding: 0 25px; }
   .filter {
     margin: 71px auto; }
     .filter > .button--brown {
@@ -2290,13 +2296,35 @@ a {
 
 @media (max-width: 767px) {
   .card__wrapper {
+    max-width: 470px;
+    margin: 0 auto;
+    padding: 0 15px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
   .card__pictures {
+    padding-top: 0;
     width: 100%; }
+  .card__pictures-list {
+    counter-reset: pictureNumber; }
   .card__pictures__item--small {
     display: none; }
+  .card__pictures__item:last-child {
+    margin-bottom: 40px; }
   .card__text {
-    width: 100%; } }
+    width: 100%; }
+    .card__text h3 {
+      padding-left: 0; }
+    .card__text p {
+      margin-bottom: 29px;
+      padding-left: 0; }
+  .card__tabs-menu {
+    padding-left: 0; }
+  .card__tabs-content {
+    padding-left: 0; }
+  .card__tabs-item dl {
+    margin-bottom: 28px; }
+  .card__tabs-list li {
+    width: 25%;
+    text-align: center; } }
