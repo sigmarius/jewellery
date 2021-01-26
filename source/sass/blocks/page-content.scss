@@ -10,4 +10,9 @@
   @media (max-width: $mobile) {
     margin-top: 92px; /*высота хедера для позиционирования вне потока в мобильном меню - соответствует заданной в блоке .page-header*/
   }
+
+  &--filter {
+    margin-top: 0;
+    padding: 0 25px;
+  }
 }

@@ -272,6 +272,12 @@
   .page-header {
     min-height: 92px;
 
+    &--card {
+      .page-header__wrapper {
+        padding-bottom: 55px;
+      }
+    }
+
     &--catalog,
     &--card {
       .page-header__cart {

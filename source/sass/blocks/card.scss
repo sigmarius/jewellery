@@ -195,20 +195,62 @@
 
 @media (max-width: $mobile) {
   .card__wrapper {
+    max-width: 470px;
+    margin: 0 auto;
+    padding: 0 15px;
     flex-direction: column;
   }
 
   .card__pictures {
+    padding-top: 0;
     width: 100%;
+  }
+
+  .card__pictures-list {
+    counter-reset: pictureNumber;
   }
 
   .card__pictures__item {
     &--small {
       display: none;
     }
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
   }
 
   .card__text {
     width: 100%;
+
+    h3 {
+      padding-left: 0;
+    }
+
+    p {
+      margin-bottom: 29px;
+      padding-left: 0;
+    }
+  }
+
+  .card__tabs-menu {
+    padding-left: 0;
+  }
+
+  .card__tabs-content {
+    padding-left: 0;
+  }
+
+  .card__tabs-item {
+    dl {
+      margin-bottom: 28px;
+    }
+  }
+
+  .card__tabs-list {
+    li {
+      width: 25%;
+      text-align: center;
+    }
   }
 }
