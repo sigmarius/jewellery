@@ -401,6 +401,12 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
+.modal {
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+
 .wrapper {
   max-width: 1170px;
   min-width: 1024px;
@@ -2248,6 +2254,17 @@ a {
   .card__tabs-item button {
     margin-bottom: 19px; }
 
+.card__add-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .card__tabs-list {
   padding: 0;
   margin: 0;
@@ -2328,3 +2345,86 @@ a {
   .card__tabs-list li {
     width: 25%;
     text-align: center; } }
+
+.basket {
+  max-width: 500px;
+  margin: 30px auto 0;
+  -webkit-box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24);
+          box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24); }
+
+.basket__wrapper {
+  padding: 45px 34px; }
+  .basket__wrapper h1 {
+    margin: 0;
+    margin-bottom: 45px;
+    padding: 0;
+    font-family: "Cormorant Garamond", "Palatino Linotype", "Book Antiqua", serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 26px;
+    line-height: 34px;
+    text-align: center;
+    color: #1d1613; }
+
+.basket__picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.basket-picture-title h2 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-family: "Cormorant Garamond", "Palatino Linotype", "Book Antiqua", serif;
+  font-weight: 700;
+  text-align: center;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: left;
+  color: #1d1613; }
+
+.basket-picture-title p {
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #1d1613; }
+
+.basket__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .basket__description p {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400; }
+    .basket__description p:last-child {
+      font-weight: 500; }
+
+.basket__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.basket__link {
+  width: 47%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
