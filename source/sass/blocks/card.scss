@@ -140,6 +140,12 @@
   }
 }
 
+.card__add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card__tabs-list {
   @include clear-list;
   display: flex;

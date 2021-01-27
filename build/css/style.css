@@ -2248,6 +2248,17 @@ a {
   .card__tabs-item button {
     margin-bottom: 19px; }
 
+.card__add-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .card__tabs-list {
   padding: 0;
   margin: 0;
