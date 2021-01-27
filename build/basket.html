@@ -43,7 +43,28 @@
             <!-- 1x: 84px; 2x: 168px -->
             <img src="img/card/necklace-detail-small-desktop@1x.jpg" srcset="img/card/necklace-detail-small-desktop@2x.jpg 2x" width="84" height="79" alt="Necklace detail">
           </picture>
+          <div class="basket-picture-title">
+            <h2>Gold Necklace</h2>
+            <p>$ 115</p>
+          </div>
+          <div class="basket__picture-counter">
+            <button class="basket__count-button basket__count-button--plus" type="button" aria-label="Increase the number"></button>
+            <label class="visually-hidden" for="count">Count of selected items</label>
+            <input type="number" id="count" name="count" value="1" readonly="">
+            <button class="basket__count-button basket__count-button--minus" type="button" aria-label="Reduce the number"></button>
+          </div>
         </div>
+
+        <div class="basket__description">
+          <p>You have 1 item in the cart</p>
+          <p>Cart subtotal: <span>$ 115</span></p>
+        </div>
+
+        <div class="basket__links">
+          <a class="basket__link button button--white" href="catalog.html">Continue shopping</a>
+          <a class="basket__link button button--brown" href="catalog.html">Checkout</a>
+        </div>
+
       </div>
     </section>
   </main>

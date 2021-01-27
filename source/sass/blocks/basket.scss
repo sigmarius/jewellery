@@ -1,0 +1,65 @@
+.basket {
+  max-width: 500px;
+  margin: 30px auto 0;
+  box-shadow: 0 4px 32px $modal-shadow;
+}
+
+.basket__wrapper {
+  padding: 45px 34px;
+
+  h1 {
+    @include clear-content(45px);
+    @include head-font(700);
+    @include font(26px, 34px);
+    text-align: center;
+    color: $dark;
+  }
+}
+
+.basket__picture {
+  display: flex;
+}
+
+.basket-picture-title {
+  h2 {
+    @include clear-content(20px);
+    @include head-font(700);
+    @include font(18px, 23px);
+    text-align: left;
+    color: $dark;
+  }
+
+  p {
+    @include clear-content(0);
+    @include font(16px, 23px);
+    font-weight: 400;
+    color: $dark;
+  }
+}
+
+.basket__description {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    @include clear-content(20px);
+    @include font(14px, 18px);
+    font-weight: 400;
+
+    &:last-child {
+      font-weight: 500;
+    }
+  }
+}
+
+.basket__links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket__link {
+  width: 47%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
