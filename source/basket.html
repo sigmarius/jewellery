@@ -17,9 +17,10 @@
     <include src="build/img/sprite_auto.svg"></include>
   </div>
 
-  <main>
+  <main class="page-content page-content--basket">
     <section class="basket">
       <div class="basket__wrapper">
+        <a href="card.html" class="basket__modal-close" area-label="Close modal window"></a>
         <h1>The item was added to your cart</h1>
 
         <div class="basket__picture">
@@ -44,7 +45,7 @@
           <div class="basket__picture-counter">
             <button class="basket__count-button basket__count-button--plus" type="button" aria-label="Increase the number"></button>
             <label class="visually-hidden" for="count">Count of selected items</label>
-            <input type="number" id="count" name="count" value="1" readonly>
+            <input type="number" id="count" name="count" value="1" readonly tabindex="-1">
             <button class="basket__count-button basket__count-button--minus" type="button" aria-label="Reduce the number"></button>
           </div>
         </div>

@@ -4,11 +4,25 @@
   box-shadow: 0 4px 32px $modal-shadow;
 }
 
+.basket__modal-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 14px;
+  height: 14px;
+  display: block;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+}
+
 .basket__wrapper {
-  padding: 45px 34px;
+  position: relative;
+  padding: 45px 34px 30px;
 
   h1 {
-    @include clear-content(45px);
+    @include clear-content(40px);
     @include head-font(700);
     @include font(26px, 34px);
     text-align: center;
@@ -17,14 +31,23 @@
 }
 
 .basket__picture {
+  margin-bottom: 53px;
   display: flex;
+
+  img {
+    padding-top: 5px;
+  }
 }
 
 .basket-picture-title {
+  margin-right: auto;
+  padding: 3px 0 0 21px;
+
   h2 {
-    @include clear-content(20px);
+    @include clear-content(6px);
     @include head-font(700);
     @include font(18px, 23px);
+
     text-align: left;
     color: $dark;
   }
@@ -37,7 +60,85 @@
   }
 }
 
+.basket__picture-counter {
+  max-width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  input {
+    @include font(18px, 23px);
+    width: 100%;
+    text-align: right;
+    font-family: $main-font;
+    font-weight: 400;
+    color: $dark;
+    border: none;
+    background-color: transparent;
+    outline-color: transparent;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      margin: 0;
+      appearance: none;
+    }
+  }
+}
+
+.basket__count-button {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $grey;
+    content: "";
+  }
+
+  &--plus::after {
+    position: absolute;
+    top: 0;
+    left: 7px;
+    width: 2px;
+    height: 100%;
+    background-color: $grey;
+    content: "";
+  }
+
+  &--minus {
+    margin-bottom: 5px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline-color: $brown;
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: $brown;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: $brown-light;
+  }
+}
+
 .basket__description {
+  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
 
@@ -62,4 +163,86 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: $tablet) {
+  .basket__wrapper {
+    padding: 45px 30px 30px;
+  }
+
+  .basket__picture {
+    img {
+      width: 88px;
+    }
+  }
+
+  .basket__picture-counter {
+    padding-top: 5px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .basket {
+    max-width: 450px;
+  }
+
+  .basket__modal-close {
+    top: 12px;
+    right: 15px;
+  }
+
+  .basket__wrapper {
+    padding: 35px 15px 25px;
+
+    h1 {
+      @include font(24px, 29px);
+      margin-bottom: 25px;
+      padding: 0 25px;
+    }
+  }
+
+  .basket__picture {
+    margin-bottom: 45px;
+
+    img {
+      width: 70px;
+      padding-top: 10px;
+    }
+  }
+
+  .basket-picture-title {
+    padding: 5px 0 0 16px;
+
+    h2 {
+      @include font(16px, 21px);
+    }
+  }
+
+  .basket__picture-counter {
+    padding-top: 8px;
+  }
+
+  .basket__count-button {
+    &--minus {
+      margin-bottom: 0;
+    }
+  }
+
+  .basket__description {
+    flex-direction: column;
+
+    p {
+      @include font(12px, 16px);
+      margin-bottom: 14px;
+    }
+  }
+
+  .basket__links {
+    flex-direction: column;
+  }
+
+  .basket__link {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
