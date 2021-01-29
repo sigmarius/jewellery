@@ -7,6 +7,9 @@
 
   background-image: url("../img/bg/hero-img-catalog-desktop@1x.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $brown-bg;
+  object-fit: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg/hero-img-catalog-desktop@2x.jpg");

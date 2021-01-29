@@ -1,0 +1,150 @@
+.login {
+  max-width: 430px;
+  margin: 27px auto 0;
+  box-shadow: 0 4px 32px $modal-shadow;
+
+  background-image: url("../img/bg/hero-img-login-desktop@1x.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: $brown-light;
+  object-fit: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg/hero-img-login-desktop@2x.jpg");
+  }
+}
+
+.login__wrapper {
+  position: relative;
+  padding: 188px 45px 55px;
+
+  h1 {
+    @include clear-content(20px);
+    @include head-font(700);
+    @include font(34px, 44px);
+    color: $dark;
+  }
+}
+
+.login__form {
+  input {
+    width: 100%;
+    margin-bottom: 22px;
+    padding: 12px 0;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid $dark;
+    appearance: none;
+    background-color: transparent;
+
+    &::placeholder {
+      @include font(14px, 21px);
+      color: $grey;
+    }
+
+    &:last-of-type {
+      margin-bottom: 5px;
+    }
+
+    &:focus {
+      outline-color: $brown;
+      background-color: $white-light;
+    }
+  }
+
+  button {
+    margin-bottom: 15px;
+  }
+}
+
+.login__form-link {
+  @include font(12px, 18px);
+  margin-bottom: 45px;
+  margin-left: auto;
+  display: block;
+  float: right;
+  color: $grey;
+
+  &:hover,
+  &:focus {
+    color: $dark;
+    outline-color: $brown;
+  }
+
+  &:active {
+    color: $brown;
+    outline-color: $brown;
+  }
+}
+
+.login__form-text {
+  @include clear-content(0);
+  @include font(14px, 21px);
+  text-align: center;
+  color: $grey;
+
+  a {
+    color: $dark;
+
+    &:hover,
+    &:focus {
+      color: $brown;
+      outline-color: $brown;
+    }
+
+    &:active {
+      color: $grey;
+      outline-color: $brown;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .login {
+    max-width: 442px;
+    background-image: url("../img/bg/hero-img-login-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg/hero-img-login-tablet@2x.jpg");
+    }
+  }
+
+  .login__wrapper {
+    padding: 188px 51px 55px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .login {
+    background-image: url("../img/bg/hero-img-login-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg/hero-img-login-mobile@2x.jpg");
+    }
+  }
+
+  .login__wrapper {
+    padding: 121px 15px 55px;
+
+    h1 {
+      @include font(24px, 31px);
+      margin-bottom: 14px;
+    }
+  }
+
+  .login__form {
+    input {
+      margin-bottom: 17px;
+    }
+  }
+
+  .login__form-link {
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: $mobile) {
+  .login__wrapper {
+    padding-top: 200px;
+  }
+}

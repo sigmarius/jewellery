@@ -3,14 +3,6 @@
   flex-shrink: 1;
   flex-basis: 0;
 
-  @media (max-width: $tablet) {
-    margin-top: 126px; /*высота хедера для позиционирования вне потока в мобильном меню - соответствует заданной в блоке .page-header*/
-  }
-
-  @media (max-width: $mobile) {
-    margin-top: 92px; /*высота хедера для позиционирования вне потока в мобильном меню - соответствует заданной в блоке .page-header*/
-  }
-
   &--filter {
     margin-top: 0;
     padding: 0 25px;
@@ -19,5 +11,27 @@
   &--basket {
     margin-top: 0;
     padding: 0 15px;
+  }
+
+  &--login {
+    margin-top: 0;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .page-content {
+    margin-top: 126px; /*высота хедера для позиционирования вне потока в мобильном меню - соответствует заданной в блоке .page-header*/
+  }
+}
+
+@media (max-width: $mobile) {
+  .page-content {
+    margin-top: 92px; /*высота хедера для позиционирования вне потока в мобильном меню - соответствует заданной в блоке .page-header*/
+
+    &--login {
+      margin-top: 0;
+      padding: 0 25px;
+    }
   }
 }
