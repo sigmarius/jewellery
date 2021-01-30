@@ -41,10 +41,10 @@
         </svg>
       </a>
 
-      <a class="page-header__login" href="login.html">Login</a>
+      <a class="page-header__login modal-open modal-open--login" href="login.html">Login</a>
 
       <div class="page-header__cart">
-        <a href="#">
+        <a class="modal-open modal-open--basket" href="basket.html">
           <span>
             Cart <span>0</span>
           </span>
@@ -462,8 +462,8 @@
         <h2>The good stuff in&nbsp;your inbox </h2>
         <p>News and updates from CH. No&nbsp;spam, we promise.</p>
         <form class="page-footer__form form form--email" method="POST" action="index.html">
-          <label class="visually-hidden" for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="Your E-mail" required>
+          <label class="visually-hidden" for="post-email">E-mail</label>
+          <input type="email" id="post-email" name="post-email" placeholder="Your E-mail" required>
           <button type="submit">Sign Up&nbsp;&nbsp;
             <svg width="29" height="12">
               <use xlink:href="#icon-arrow-right"></use>
@@ -541,6 +541,64 @@
       </section>
     </div>
   </footer>
+
+  <section class="login modal modal--login">
+    <h2>Log In</h2>
+    <a href="index.html" class="modal__close modal__close--login" area-label="Close modal window"></a>
+
+    <form class="login__form" action="https://echo.htmlacademy.ru" method="POST">
+      <label class="visually-hidden" for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Your E-mail" required>
+      <label class="visually-hidden" for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+
+      <a class="login__form-link" href="#">Forgot your password?</a>
+      <button class="button button--brown" type="submit">Log In</button>
+
+      <p class="login__form-text">Don’t have an account? <a href="#">Sign up</a></p>
+    </form>
+  </section>
+
+  <section class="basket modal modal--basket">
+    <div class="basket__wrapper">
+      <a href="card.html" class="modal__close modal__close--basket" area-label="Close modal window"></a>
+      <h1>The item was added to your cart</h1>
+      <div class="basket__picture">
+        <picture>
+          <!-- 1x: 70px; 2x: 140px -->
+          <source media="(max-width: 767px)" srcset="img/card/necklace-detail-small-mobile@1x.webp 1x, img/card/necklace-detail-small-mobile@2x.webp 2x" type="image/webp" />
+          <!-- 1x: 88px; 2x: 176px -->
+          <source media="(max-width: 1023px)" srcset="img/card/necklace-detail-small-tablet@1x.webp 1x, img/card/necklace-detail-small-tablet@2x.webp 2x" type="image/webp" />
+          <!-- 1x: 84px; 2x: 168px -->
+          <source media="(min-width: 1024px)" srcset="img/card/necklace-detail-small-desktop@1x.webp 1x, img/card/necklace-detail-small-desktop@2x.webp 2x" type="image/webp" />
+          <!-- 1x: 70px; 2x: 140px -->
+          <source media="(max-width: 767px)" srcset="img/card/necklace-detail-small-mobile@1x.jpg 1x, img/card/necklace-detail-small-mobile@2x.jpg 2x" />
+          <!-- 1x: 88px; 2x: 176px -->
+          <source media="(max-width: 1023px)" srcset="img/card/necklace-detail-small-tablet@1x.jpg 1x, img/card/necklace-detail-small-tablet@2x.jpg 2x" />
+          <!-- 1x: 84px; 2x: 168px -->
+          <img src="img/card/necklace-detail-small-desktop@1x.jpg" srcset="img/card/necklace-detail-small-desktop@2x.jpg 2x" width="84" height="79" alt="Necklace detail" />
+        </picture>
+        <div class="basket-picture-title">
+          <h2>Gold Necklace</h2>
+          <p>$ 115</p>
+        </div>
+        <div class="basket__picture-counter">
+          <button class="basket__count-button basket__count-button--plus" type="button" aria-label="Increase the number"></button>
+          <label class="visually-hidden" for="count">Count of selected items</label>
+          <input type="number" id="count" name="count" value="1" readonly tabindex="-1">
+          <button class="basket__count-button basket__count-button--minus" type="button" aria-label="Reduce the number"></button>
+        </div>
+      </div>
+      <div class="basket__description">
+        <p>You have 1 item in the cart</p>
+        <p>Cart subtotal: <span>$ 115</span></p>
+      </div>
+      <div class="basket__links">
+        <a class="basket__link button button--white" href="catalog.html">Continue shopping</a>
+        <a class="basket__link button button--brown" href="catalog.html">Checkout</a>
+      </div>
+    </div>
+  </section>
 
   <script src="js/main.js"></script>
   <script src="js/vendor.js"></script>
