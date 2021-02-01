@@ -551,20 +551,22 @@
   </footer>
 
   <section class="login modal modal--login">
-    <h2>Log In</h2>
-    <a href="index.html" class="modal__close modal__close--login" area-label="Close modal window"></a>
+    <div class="login__wrapper">
+      <h2>Log In</h2>
+      <a href="index.html" class="modal__close modal__close--login" area-label="Close modal window"></a>
 
-    <form class="login__form" action="https://echo.htmlacademy.ru" method="POST">
-      <label class="visually-hidden" for="email">E-mail</label>
-      <input type="email" id="email" name="email" placeholder="Your E-mail" required="">
-      <label class="visually-hidden" for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Password" required="">
+      <form class="login__form" action="https://echo.htmlacademy.ru" method="POST">
+        <label class="visually-hidden" for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Your E-mail" required="">
+        <label class="visually-hidden" for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" required="">
 
-      <a class="login__form-link" href="#">Forgot your password?</a>
-      <button class="button button--brown" type="submit">Log In</button>
+        <a class="login__form-link" href="#">Forgot your password?</a>
+        <button class="button button--brown" type="submit">Log In</button>
 
-      <p class="login__form-text">Don’t have an account? <a href="#">Sign up</a></p>
-    </form>
+        <p class="login__form-text">Don’t have an account? <a href="#">Sign up</a></p>
+      </form>
+    </div>
   </section>
 
   <section class="basket modal modal--basket">

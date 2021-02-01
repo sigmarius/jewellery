@@ -13,7 +13,6 @@
   var modalBasketClose = document.querySelector('.modal__close--basket');
 
   var body = document.querySelector('body');
-  var overlay = document.querySelector('.overlay');
 
   var email = modalLogin.querySelector('[id=email]');
 
@@ -28,10 +27,12 @@
 
   var setVisible = function (visible) {
     if (visible) {
-      body.classList.add('overlay');
+      body.classList.add('overlay--open');
       document.addEventListener('keydown', escapeClickHandler);
     } else {
-      body.classList.remove('overlay');
+      body.classList.remove('overlay--open');
+      modalLogin.classList.remove('modal--show');
+      document.querySelector('.overlay').remove();
       document.removeEventListener('keydowm', escapeClickHandler);
     }
   };
@@ -43,32 +44,32 @@
     }
   };
 
-  var overlayClickHandler = function (evt) {
-    if (evt.target !== modalLogin && evt.target === overlay) {
-      console.log(evt.target);
-      setVisible(false);
-    }
-  };
-
-  modalLogin.addEventListener('click', overlayClickHandler);
-
   modalLoginOpen.addEventListener('click', function (evt) {
     evt.preventDefault();
     modalLogin.classList.add('modal--show');
+
+    var overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+    body.appendChild(overlay);
+
+    overlay.addEventListener('click', function (overlayEvt) {
+      if (overlayEvt.target === overlay) {
+        setVisible(false);
+      }
+    });
+
     setVisible(true);
     email.focus();
-
-    // if (body.classList.contains('overlay')) {
-    //   body.addEventListener('click', function () {
-    //     if (evt.target !== modalLogin) {
-    //       setVisible(false);
-    //     }
-    //   });
-    // }
 
     if (emailStorage) {
       email.value = emailStorage;
     }
+  });
+
+  modalLoginClose.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    modalLogin.classList.remove('modal--show');
+    setVisible(false);
   });
 
 })();

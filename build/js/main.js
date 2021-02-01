@@ -61,7 +61,6 @@
     var modalBasket = document.querySelector('.modal--basket');
     var modalBasketClose = document.querySelector('.modal__close--basket');
     var body = document.querySelector('body');
-    var overlay = document.querySelector('.overlay');
     var email = modalLogin.querySelector('[id=email]');
     var isStorage = true;
     var emailStorage = '';
@@ -72,10 +71,12 @@
     }
     var setVisible = function (visible) {
         if (visible) {
-            body.classList.add('overlay');
+            body.classList.add('overlay--open');
             document.addEventListener('keydown', escapeClickHandler);
         } else {
-            body.classList.remove('overlay');
+            body.classList.remove('overlay--open');
+            modalLogin.classList.remove('modal--show');
+            document.querySelector('.overlay').remove();
             document.removeEventListener('keydowm', escapeClickHandler);
         }
     };
@@ -85,32 +86,62 @@
             setVisible(false);
         }
     };
-    var overlayClickHandler = function (evt) {
-        if (evt.target !== modalLogin && evt.target === overlay) {
-            console.log(evt.target);
-            setVisible(false);
-        }
-    };
-    modalLogin.addEventListener('click', overlayClickHandler);
     modalLoginOpen.addEventListener('click', function (evt) {
         evt.preventDefault();
         modalLogin.classList.add('modal--show');
+        var overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+        body.appendChild(overlay);
+        overlay.addEventListener('click', function (overlayEvt) {
+            if (overlayEvt.target === overlay) {
+                setVisible(false);
+            }
+        });
         setVisible(true);
         email.focus();
-        // if (body.classList.contains('overlay')) {
-        //   body.addEventListener('click', function () {
-        //     if (evt.target !== modalLogin) {
-        //       setVisible(false);
-        //     }
-        //   });
-        // }
         if (emailStorage) {
             email.value = emailStorage;
         }
     });
+    modalLoginClose.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        modalLogin.classList.remove('modal--show');
+        setVisible(false);
+    });
 }());
 // слайдер
 (function () {
+    var list = document.querySelector('.slider__list');
+    var items = document.querySelectorAll('.slider__item');
+    var buttonLeft = document.querySelector('.slider__button--left');
+    var buttonRight = document.querySelector('.slider__button--right');
+    var wrapperWidth = parseFloat(getComputedStyle(list).width);
+    var itemWidth = parseFloat(getComputedStyle(items[0]).width);
+    var position = 0;
+    console.log(wrapperWidth);
+    console.log(itemWidth);
+    // var positionLeftItem = 0;
+    // var transform = 0;
+    // var step = wrapperWidth;
+    // var itemsArray = [];
+    // items.forEach(function (item, index) {
+    //   itemsArray.push({item: item, position: index, transform: 0});
+    // });
+    // var position = {
+    //   getMin: 0,
+    //   getMax: itemsArray.length - 1,
+    // };
+    buttonLeft.addEventListener('click', function () {
+        position += wrapperWidth;
+        position = Math.min(position, 0);
+        console.log(list.style.transform);
+        list.style.transform = 'translateX(' + position + '%)';
+    });
+    buttonRight.addEventListener('click', function () {
+        position -= wrapperWidth;
+        position = Math.max(position, -itemWidth * items.length - 4);
+        list.style.marginLeft = position + 'px';
+    });
 }());
 // табы для карточки товара
 (function () {

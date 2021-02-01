@@ -5,6 +5,7 @@
   &--show {
     position: fixed;
     left: 50%;
+    z-index: 2;
     transform: translateX(-50%);
     display: block;
   }
