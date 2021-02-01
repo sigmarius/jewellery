@@ -8,7 +8,7 @@
   position: relative;
   padding: 45px 34px 30px;
 
-  h1 {
+  h2 {
     @include clear-content(40px);
     @include head-font(700);
     @include font(26px, 34px);
@@ -150,6 +150,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 @media (max-width: $tablet) {
@@ -176,7 +177,7 @@
   .basket__wrapper {
     padding: 35px 15px 25px;
 
-    h1 {
+    h2 {
       @include font(24px, 29px);
       margin-bottom: 25px;
       padding: 0 25px;

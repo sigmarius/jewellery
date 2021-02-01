@@ -2412,7 +2412,7 @@ a {
 .basket__wrapper {
   position: relative;
   padding: 45px 34px 30px; }
-  .basket__wrapper h1 {
+  .basket__wrapper h2 {
     margin: 0;
     margin-bottom: 40px;
     padding: 0;
@@ -2554,7 +2554,8 @@ a {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  text-align: center; }
 
 @media (max-width: 1023px) {
   .basket__wrapper {
@@ -2569,7 +2570,7 @@ a {
     max-width: 450px; }
   .basket__wrapper {
     padding: 35px 15px 25px; }
-    .basket__wrapper h1 {
+    .basket__wrapper h2 {
       font-size: 24px;
       line-height: 29px;
       margin-bottom: 25px;
