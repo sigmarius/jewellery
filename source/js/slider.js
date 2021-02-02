@@ -4,10 +4,10 @@
 
 (function () {
 
-  // var PictureCount = {
-  //   DESKTOP: 4,
-  //   TABLET: 2,
-  // };
+  var PictureCount = {
+    DESKTOP: 4,
+    TABLET: 2,
+  };
 
   var tablet = window.matchMedia('(max-width: 1023px)');
 
@@ -16,14 +16,21 @@
   var buttonLeft = document.querySelector('.slider__button--left');
   var buttonRight = document.querySelector('.slider__button--right');
 
-  var wrapperWidth = parseFloat(getComputedStyle(list).width);
-  var itemWidth = parseFloat(getComputedStyle(items[0]).width);
+  // var wrapperWidth = parseFloat(getComputedStyle(list).width);
+  // var itemWidth = parseFloat(getComputedStyle(items[0]).width);
+
+  var wrapperWidth;
+  var itemWidth;
 
   var positionLeftItem = 0;
   var transform = 0;
   // var step = itemWidth / wrapperWidth * 100 * 4;
-  var step = itemWidth / wrapperWidth * 100;
+  // var step = itemWidth / wrapperWidth * 100;
+
+  var step;
   var itemsArray = [];
+
+  var startX;
 
   items.forEach(function (item, index) {
     itemsArray.push({item: item, position: index, transform: 0});
@@ -31,59 +38,103 @@
 
   var position = {
     getMin: 0,
-    getMax: itemsArray.length,
+    getMax: itemsArray.length - 1,
   };
 
-  var count = 4; // временная переменная для определения количества изображений на адаптиве
+  var count; // временная переменная для определения количества изображений на адаптиве
   // var step;
 
-  // var changeSizeHandler = function (evt) {
-  //   if (evt.matches) {
-  //     count = PictureCount.TABLET;
-  //     console.log(count);
-  //   } else {
-  //     count = PictureCount.DESKTOP;
-  //     console.log(count);
-  //   }
-  //   // step = itemWidth / wrapperWidth * 100 * count;
-  // };
-
-  // tablet.addListener(changeSizeHandler);
-  // changeSizeHandler(tablet);
-
-  buttonRight.addEventListener('click', function () {
-    if ((positionLeftItem + wrapperWidth / itemWidth + count - 1) >= position.getMax) {
-      return;
+  var changeSizeHandler = function (evt) {
+    
+    if (evt.matches) {
+      count = PictureCount.TABLET;
+    } else {
+      count = PictureCount.DESKTOP;
     }
 
-    positionLeftItem++;
-    transform -= step * count;
+    wrapperWidth = parseFloat(getComputedStyle(list).width);
+    itemWidth = parseFloat(getComputedStyle(items[0]).width);
 
+    step = itemWidth / wrapperWidth * 100;
+
+    positionLeftItem = 0;
+    transform = 0;
     list.style.transform = 'translateX(' + transform + '%)';
-  });
+    // step = itemWidth / wrapperWidth * 100 * count;
 
-  buttonLeft.addEventListener('click', function () {
+    console.log('work!');
+  };
+
+  tablet.addListener(changeSizeHandler);
+  changeSizeHandler(tablet);
+
+  // window.addEventListener('resize', function () {
+  //   positionLeftItem = 0;
+  //   transform = 0;
+
+  //   list.style.transform = 'translateX(' + transform + '%)';
+  // });
+
+  // buttonRight.addEventListener('click', function () {
+  //   if ((positionLeftItem + wrapperWidth / itemWidth + count - 1) >= position.getMax) {
+  //     return;
+  //   }
+
+  //   positionLeftItem++;
+  //   transform -= step * count;
+
+  //   list.style.transform = 'translateX(' + transform + '%)';
+  // });
+
+  var buttonRightClickHandler = function () {
+    if (positionLeftItem + count >= position.getMax) {
+      return;
+    } else {
+      positionLeftItem = positionLeftItem + count;
+
+      transform -= step * count;
+      console.log('right' + wrapperWidth);
+      list.style.transform = 'translateX(' + transform + '%)';
+    }
+  };
+
+  var buttonLeftClickHandler = function () {
     if (positionLeftItem <= position.getMin) {
       return;
     }
 
-    positionLeftItem--;
+    positionLeftItem = positionLeftItem - count;
     transform += step * count;
-
+    console.log('left ' + wrapperWidth);
     list.style.transform = 'translateX(' + transform + '%)';
-  });
+  };
 
-  // buttonLeft.addEventListener('click', function () {
-  //   position += wrapperWidth;
-  //   position = Math.min(position, 0);
-  //   console.log(list.style.transform);
-  //   list.style.transform = 'translateX(' + position + '%)';
-  // });
+
+  buttonRight.addEventListener('click', buttonRightClickHandler);
+  buttonLeft.addEventListener('click', buttonLeftClickHandler);
 
   // buttonRight.addEventListener('click', function () {
-  //   position -= wrapperWidth;
-  //   position = Math.max(position, -itemWidth * items.length - 4);
-  //   list.style.marginLeft = position + 'px';
+  //   if (positionLeftItem + count >= position.getMax) {
+  //     return;
+  //   } else {
+
+  //     positionLeftItem = positionLeftItem + count;
+  //     console.log(positionLeftItem);
+  //     transform -= step * count;
+  
+  //     list.style.transform = 'translateX(' + transform + '%)';
+  //   }
+  // });
+
+  // buttonLeft.addEventListener('click', function () {
+  //   if (positionLeftItem <= position.getMin) {
+  //     return;
+  //   }
+
+  //   positionLeftItem = positionLeftItem - count;
+  //   transform += step * count;
+
+  //   list.style.transform = 'translateX(' + transform + '%)';
   // });
 
 })();
