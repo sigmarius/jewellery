@@ -402,10 +402,12 @@ a {
   overflow: hidden; }
 
 .modal {
+  z-index: 1;
   display: none; }
   .modal--show {
     position: fixed;
     left: 50%;
+    z-index: 2;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     display: block; }
@@ -433,6 +435,36 @@ a {
       right: 15px;
       width: 14px;
       height: 14px; } }
+
+@media (max-width: 1023px) {
+  .modal--filter {
+    display: none; }
+    .modal--filter.modal--show {
+      position: fixed;
+      top: 0;
+      left: 1px;
+      width: 426px;
+      display: block;
+      -webkit-transform: none;
+              transform: none; } }
+
+@media (max-width: 767px) {
+  .modal--filter.modal--show {
+    left: 24px;
+    width: 85%; } }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+  background-color: #ffffff; }
+  .overlay--open {
+    overflow: hidden; }
 
 .wrapper {
   max-width: 1170px;
@@ -475,6 +507,8 @@ a {
     padding-bottom: 73px; }
   .page-header--catalog .page-header__cart, .page-header--card .page-header__cart {
     top: 53px; }
+  .page-header--catalog .page-header__nav {
+    display: none; }
   .page-header--card::after {
     -webkit-box-shadow: 0 61px 0 0 #f6f5f4;
             box-shadow: 0 61px 0 0 #f6f5f4; }
@@ -546,6 +580,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
     min-height: 126px;
     min-width: 100%; }
     .page-header::after {
@@ -557,6 +592,8 @@ a {
       .page-header a:active {
         color: #1d1613;
         opacity: 0.6; }
+    .page-header--catalog .page-header__nav, .page-header--card .page-header__nav {
+      display: block; }
   .page-header__wrapper {
     padding: 136px 44px 0 46px;
     -webkit-box-orient: vertical;
@@ -625,6 +662,10 @@ a {
     fill: #ffffff; }
   .page-header--opened .page-header__cart svg {
     stroke: #ffffff; }
+  .page-header--opened.page-header--catalog .page-header__wrapper {
+    padding-top: 136px; }
+  .page-header--opened.page-header--card .page-header__wrapper {
+    padding-top: 136px; }
   .page-header--closed.page-header {
     background-color: #ffffff; }
   .page-header--closed .page-header__wrapper {
@@ -1764,6 +1805,13 @@ a {
   max-width: 270px;
   margin-bottom: 35px;
   text-align: center; }
+  .catalog__item a {
+    color: #1d1613; }
+    .catalog__item a:hover, .catalog__item a:focus {
+      color: #a87b62; }
+    .catalog__item a:active {
+      color: rgba(86, 64, 52, 0.7);
+      opacity: 0.6; }
   .catalog__item img {
     width: 100%;
     max-height: 272px;
@@ -1779,16 +1827,14 @@ a {
     padding: 0;
     font-size: 16px;
     line-height: 21px;
-    font-weight: 500;
-    color: #1d1613; }
+    font-weight: 500; }
   .catalog__item p {
     margin: 0;
     margin-bottom: 0;
     padding: 0;
     font-size: 14px;
     line-height: 18px;
-    font-weight: 700;
-    color: #1d1613; }
+    font-weight: 700; }
 
 @media (max-width: 1023px) {
   .catalog__hero {
@@ -1817,8 +1863,6 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .catalog__form {
-    display: none; }
   .catalog__list {
     width: 100%;
     margin-top: 25px;
@@ -2397,7 +2441,7 @@ a {
 .basket__wrapper {
   position: relative;
   padding: 45px 34px 30px; }
-  .basket__wrapper h1 {
+  .basket__wrapper h2 {
     margin: 0;
     margin-bottom: 40px;
     padding: 0;
@@ -2539,7 +2583,8 @@ a {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  text-align: center; }
 
 @media (max-width: 1023px) {
   .basket__wrapper {
@@ -2554,7 +2599,7 @@ a {
     max-width: 450px; }
   .basket__wrapper {
     padding: 35px 15px 25px; }
-    .basket__wrapper h1 {
+    .basket__wrapper h2 {
       font-size: 24px;
       line-height: 29px;
       margin-bottom: 25px;
@@ -2609,7 +2654,7 @@ a {
 .login__wrapper {
   position: relative;
   padding: 188px 45px 55px; }
-  .login__wrapper h1 {
+  .login__wrapper h2 {
     margin: 0;
     margin-bottom: 20px;
     padding: 0;
@@ -2714,7 +2759,7 @@ a {
 @media (max-width: 767px) {
   .login__wrapper {
     padding: 121px 15px 55px; }
-    .login__wrapper h1 {
+    .login__wrapper h2 {
       font-size: 24px;
       line-height: 31px;
       margin-bottom: 14px; }
