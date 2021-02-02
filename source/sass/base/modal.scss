@@ -39,3 +39,27 @@
     height: 14px;
   }
 }
+
+@media (max-width: $tablet) {
+  .modal--filter {
+    display: none;
+
+    &.modal--show {
+      position: fixed;
+      top: 0;
+      left: 1px;
+      width: 426px;
+      display: block;
+      transform: none;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .modal--filter {
+    &.modal--show {
+      left: 24px;
+      width: 85%;
+    }
+  }
+}

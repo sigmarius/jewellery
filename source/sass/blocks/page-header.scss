@@ -42,6 +42,12 @@
     }
   }
 
+  &--catalog {
+    .page-header__nav {
+      display: none;
+    }
+  }
+
   &--card {
     &::after {
       box-shadow: 0 61px 0 0 $line;
@@ -115,6 +121,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
     min-height: 126px;
     min-width: 100%;
 
@@ -133,6 +140,13 @@
       &:active {
         color: $dark;
         opacity: 0.6;
+      }
+    }
+
+    &--catalog,
+    &--card {
+      .page-header__nav {
+        display: block;
       }
     }
   }
@@ -231,6 +245,18 @@
 
     .page-header__cart svg {
       stroke: $white;
+    }
+
+    &.page-header--catalog {
+      .page-header__wrapper {
+        padding-top: 136px;
+      }
+    }
+
+    &.page-header--card {
+      .page-header__wrapper {
+        padding-top: 136px;
+      }
     }
   }
 

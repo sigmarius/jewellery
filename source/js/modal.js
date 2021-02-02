@@ -13,6 +13,10 @@
   var modalBasket = document.querySelector('.modal--basket');
   var modalBasketClose = document.querySelector('.modal__close--basket');
 
+  var modalFilterOpen = document.querySelector('.catalog__filter-button');
+  var modalFilter = document.querySelector('.filter');
+  var modalFilterClose = document.querySelector('.filter__modal-close');
+
   var body = document.querySelector('body');
 
   var email = document.querySelector('[id=email]');
@@ -68,33 +72,54 @@
     setVisible(false);
   };
 
-  modalLoginOpen.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    modalOpenHandler(modalLogin);
-    email.focus();
-
-    if (emailStorage) {
-      email.value = emailStorage;
-    }
-  });
-
-  modalLoginClose.addEventListener('click', modalCloseHandler);
-
-  loginForm.addEventListener('submit', function (evt) {
-    if (!email.value) {
+  if (modalLoginOpen && modalLogin) {
+    modalLoginOpen.addEventListener('click', function (evt) {
       evt.preventDefault();
-    } else {
-      if (isStorage) {
-        localStorage.setItem('emailStorage', email.value);
+      modalOpenHandler(modalLogin);
+      email.focus();
+
+      if (emailStorage) {
+        email.value = emailStorage;
       }
-    }
-  });
+    });
+  }
 
-  modalBasketOpen.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    modalOpenHandler(modalBasket);
-  });
+  if (modalLoginClose) {
+    modalLoginClose.addEventListener('click', modalCloseHandler);
+  }
 
-  modalBasketClose.addEventListener('click', modalCloseHandler);
+  if (loginForm) {
+    loginForm.addEventListener('submit', function (evt) {
+      if (!email.value) {
+        evt.preventDefault();
+      } else {
+        if (isStorage) {
+          localStorage.setItem('emailStorage', email.value);
+        }
+      }
+    });
+  }
+
+  if (modalBasketOpen && modalBasket) {
+    modalBasketOpen.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      modalOpenHandler(modalBasket);
+    });
+  }
+
+  if (modalBasketClose) {
+    modalBasketClose.addEventListener('click', modalCloseHandler);
+  }
+
+  if (modalFilterOpen && modalFilter) {
+    modalFilterOpen.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      modalOpenHandler(modalFilter);
+    });
+  }
+
+  if (modalFilterClose) {
+    modalFilterClose.addEventListener('click', modalCloseHandler);
+  }
 
 })();

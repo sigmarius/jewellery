@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="Description" content="Online store of handmade jewelry made of gold and precious stones">
-  <title>CH Jewellery online store add to cart</title>
-  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-700.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Online store of handmade jewelry made of gold and precious stones">
+    <title>CH Jewellery online store add to cart</title>
+    <link rel="preload" href="fonts/cormorant-garamond-v9-latin-700.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
 
-<body>
+  <body>
+    <main class="page-content page-content--basket">
+      <section class="basket modal modal--nojs">
+        <h1 class="visually-hidden">Shopping cart with your purchases</h1>
+        <div class="basket__wrapper">
+          <a href="card.html" class="modal__close" aria-label="Close modal window"></a>
+          <h2>The item was added to your cart</h2>
 
-  <main class="page-content page-content--basket">
-    <section class="basket modal modal--nojs">
-      <h1 class="visually-hidden">Shopping cart with your purchases</h1>
-      <div class="basket__wrapper">
-        <a href="card.html" class="modal__close" aria-label="Close modal window"></a>
-        <h2>The item was added to your cart</h2>
-
-        <div class="basket__picture">
-          <picture>
-            <!-- 1x: 70px; 2x: 140px -->
-            <source media="(max-width: 767px)" srcset="img/card/necklace-detail-small-mobile@1x.webp 1x, img/card/necklace-detail-small-mobile@2x.webp 2x" type="image/webp">
-            <!-- 1x: 88px; 2x: 176px -->
-            <source media="(max-width: 1023px)" srcset="img/card/necklace-detail-small-tablet@1x.webp 1x, img/card/necklace-detail-small-tablet@2x.webp 2x" type="image/webp">
-            <!-- 1x: 84px; 2x: 168px -->
-            <source media="(min-width: 1024px)" srcset="img/card/necklace-detail-small-desktop@1x.webp 1x, img/card/necklace-detail-small-desktop@2x.webp 2x" type="image/webp">
-            <!-- 1x: 70px; 2x: 140px -->
-            <source media="(max-width: 767px)" srcset="img/card/necklace-detail-small-mobile@1x.jpg 1x, img/card/necklace-detail-small-mobile@2x.jpg 2x">
-            <!-- 1x: 88px; 2x: 176px -->
-            <source media="(max-width: 1023px)" srcset="img/card/necklace-detail-small-tablet@1x.jpg 1x, img/card/necklace-detail-small-tablet@2x.jpg 2x">
-            <!-- 1x: 84px; 2x: 168px -->
-            <img src="img/card/necklace-detail-small-desktop@1x.jpg" srcset="img/card/necklace-detail-small-desktop@2x.jpg 2x" width="84" height="79" alt="Necklace detail">
-          </picture>
-          <div class="basket-picture-title">
-            <h2>Gold Necklace</h2>
-            <p>$ 115</p>
+          <div class="basket__picture">
+            <picture>
+              <!-- 1x: 70px; 2x: 140px -->
+              <source media="(max-width: 767px)" srcset="img/card/necklace-detail-small-mobile@1x.webp 1x, img/card/necklace-detail-small-mobile@2x.webp 2x" type="image/webp">
+              <!-- 1x: 88px; 2x: 176px -->
+              <source media="(max-width: 1023px)" srcset="img/card/necklace-detail-small-tablet@1x.webp 1x, img/card/necklace-detail-small-tablet@2x.webp 2x" type="image/webp">
+              <!-- 1x: 84px; 2x: 168px -->
+              <source media="(min-width: 1024px)" srcset="img/card/necklace-detail-small-desktop@1x.webp 1x, img/card/necklace-detail-small-desktop@2x.webp 2x" type="image/webp">
+              <!-- 1x: 70px; 2x: 140px -->
+              <source media="(max-width: 767px)" srcset="img/card/necklace-detail-small-mobile@1x.jpg 1x, img/card/necklace-detail-small-mobile@2x.jpg 2x">
+              <!-- 1x: 88px; 2x: 176px -->
+              <source media="(max-width: 1023px)" srcset="img/card/necklace-detail-small-tablet@1x.jpg 1x, img/card/necklace-detail-small-tablet@2x.jpg 2x">
+              <!-- 1x: 84px; 2x: 168px -->
+              <img src="img/card/necklace-detail-small-desktop@1x.jpg" srcset="img/card/necklace-detail-small-desktop@2x.jpg 2x" width="84" height="79" alt="Necklace detail">
+            </picture>
+            <div class="basket-picture-title">
+              <h2>Gold Necklace</h2>
+              <p>$ 115</p>
+            </div>
+            <div class="basket__picture-counter">
+              <button class="basket__count-button basket__count-button--plus" type="button" aria-label="Increase the number"></button>
+              <label class="visually-hidden" for="count">Count of selected items</label>
+              <input type="number" id="count" name="count" value="1" readonly="" tabindex="-1">
+              <button class="basket__count-button basket__count-button--minus" type="button" aria-label="Reduce the number"></button>
+            </div>
           </div>
-          <div class="basket__picture-counter">
-            <button class="basket__count-button basket__count-button--plus" type="button" aria-label="Increase the number"></button>
-            <label class="visually-hidden" for="count">Count of selected items</label>
-            <input type="number" id="count" name="count" value="1" readonly="" tabindex="-1">
-            <button class="basket__count-button basket__count-button--minus" type="button" aria-label="Reduce the number"></button>
+
+          <div class="basket__description">
+            <p>You have 1 item in the cart</p>
+            <p>Cart subtotal: <span>$ 115</span></p>
+          </div>
+
+          <div class="basket__links">
+            <a class="basket__link button button--white" href="catalog.html">Continue shopping</a>
+            <a class="basket__link button button--brown" href="catalog.html">Checkout</a>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="basket__description">
-          <p>You have 1 item in the cart</p>
-          <p>Cart subtotal: <span>$ 115</span></p>
-        </div>
-
-        <div class="basket__links">
-          <a class="basket__link button button--white" href="catalog.html">Continue shopping</a>
-          <a class="basket__link button button--brown" href="catalog.html">Checkout</a>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
