@@ -2,17 +2,17 @@
   z-index: 1;
   display: none;
 
-  &--show {
-    position: fixed;
-    left: 50%;
-    z-index: 2;
-    transform: translateX(-50%);
-    display: block;
-  }
-
   &--nojs {
     display: block;
   }
+}
+
+.modal-show {
+  position: fixed;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  display: block;
 }
 
 .modal__close {
@@ -37,29 +37,5 @@
     right: 15px;
     width: 14px;
     height: 14px;
-  }
-}
-
-@media (max-width: $tablet) {
-  .modal--filter {
-    display: none;
-
-    &.modal--show {
-      position: fixed;
-      top: 0;
-      left: 1px;
-      width: 426px;
-      display: block;
-      transform: none;
-    }
-  }
-}
-
-@media (max-width: $mobile) {
-  .modal--filter {
-    &.modal--show {
-      left: 24px;
-      width: 85%;
-    }
   }
 }

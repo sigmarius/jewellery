@@ -90,20 +90,22 @@
   };
 
   var setMobileTouch = function () {
-    list.addEventListener('touchstart', function (evt) {
-      startX = evt.changedTouches[0].clientX;
-    });
+    if (list) {
+      list.addEventListener('touchstart', function (evt) {
+        startX = evt.changedTouches[0].clientX;
+      });
 
-    list.addEventListener('touchend', function (evt) {
-      var endX = evt.changedTouches[0].clientX;
-      var deltaX = endX - startX;
+      list.addEventListener('touchend', function (evt) {
+        var endX = evt.changedTouches[0].clientX;
+        var deltaX = endX - startX;
 
-      if (deltaX > 50) {
-        buttonRightClickHandler();
-      } else if (deltaX < -50) {
-        buttonLeftClickHandler();
-      }
-    });
+        if (deltaX > 50) {
+          buttonRightClickHandler();
+        } else if (deltaX < -50) {
+          buttonLeftClickHandler();
+        }
+      });
+    }
   };
 
   if (buttonLeft && buttonRight) {

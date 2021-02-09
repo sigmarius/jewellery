@@ -229,11 +229,6 @@
   }
 
   .page-header--opened {
-    &.page-header {
-      min-height: 778px;
-      background-color: $brown;
-    }
-
     .page-header__toggle::before {
       background-color: $white;
       box-shadow: 0 8px 0 0 $white, 0 16px 0 0 $white;
@@ -246,25 +241,26 @@
     .page-header__cart svg {
       stroke: $white;
     }
+  }
 
-    &.page-header--catalog {
-      .page-header__wrapper {
-        padding-top: 136px;
-      }
+  .page-header--opened.page-header {
+    min-height: 778px;
+    background-color: $brown;
+  }
+
+  .page-header--opened.page-header--catalog {
+    .page-header__wrapper {
+      padding-top: 136px;
     }
+  }
 
-    &.page-header--card {
-      .page-header__wrapper {
-        padding-top: 136px;
-      }
+  .page-header--opened.page-header--card {
+    .page-header__wrapper {
+      padding-top: 136px;
     }
   }
 
   .page-header--closed {
-    &.page-header {
-      background-color: $white;
-    }
-
     .page-header__wrapper {
       padding-top: 0;
     }
@@ -287,6 +283,10 @@
     .page-header__form {
       display: none;
     }
+  }
+
+  .page-header--closed.page-header {
+    background-color: $white;
   }
 
   .page-header--nojs {
@@ -312,11 +312,9 @@
     }
   }
 
-  .page-header--opened {
-    &.page-header {
-      min-height: 684px;
-      background-color: $brown;
-    }
+  .page-header--opened.page-header {
+    min-height: 684px;
+    background-color: $brown;
   }
 
   .page-header__wrapper {

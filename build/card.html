@@ -98,7 +98,7 @@
         <div class="card__wrapper wrapper">
           <div class="card__pictures">
             <ul class="card__pictures-list">
-              <li class="card__pictures__item card__pictures__item--small">
+              <li class="card__pictures-item card__pictures-item--small">
                 <picture>
                   <!-- 1x: 97px; 2x: 194px -->
                   <source media="(max-width: 1023px)" srcset="img/card/gold-necklace-for-women-tablet@1x.webp 1x, img/card/gold-necklace-for-women-tablet@2x.webp 2x" type="image/webp">
@@ -110,7 +110,7 @@
                   <img src="img/card/gold-necklace-for-women-desktop@1x.jpg" srcset="img/card/gold-necklace-for-women-desktop@2x.jpg 2x" width="100" height="125" alt="Gold necklace for women">
                 </picture>
               </li>
-              <li class="card__pictures__item card__pictures__item--small">
+              <li class="card__pictures-item card__pictures-item--small">
                 <picture>
                   <!-- 1x: 97px; 2x: 194px -->
                   <source media="(max-width: 1023px)" srcset="img/card/pretty-gold-necklace-tablet@1x.webp 1x, img/card/pretty-gold-necklace-tablet@2x.webp 2x" type="image/webp">
@@ -122,7 +122,7 @@
                   <img src="img/card/pretty-gold-necklace-desktop@1x.jpg" srcset="img/card/pretty-gold-necklace-desktop@2x.jpg 2x" width="100" height="125" alt="Pretty gold necklace">
                 </picture>
               </li>
-              <li class="card__pictures__item card__pictures__item--small">
+              <li class="card__pictures-item card__pictures-item--small">
                 <picture>
                   <!-- 1x: 97px; 2x: 194px -->
                   <source media="(max-width: 1023px)" srcset="img/card/womens-necklace-set-tablet@1x.webp 1x, img/card/womens-necklace-set-tablet@2x.webp 2x" type="image/webp">
@@ -134,7 +134,7 @@
                   <img src="img/card/womens-necklace-set-desktop@1x.jpg" srcset="img/card/womens-necklace-set-desktop@2x.jpg 2x" width="100" height="125" alt="Womens necklace set">
                 </picture>
               </li>
-              <li class="card__pictures__item card__pictures__item--big">
+              <li class="card__pictures-item card__pictures-item--big">
                 <picture>
                   <!-- 1x: 290px; 2x: 580px -->
                   <source media="(max-width: 767px)" srcset="img/card/necklace-detail-mobile@1x.webp 1x, img/card/necklace-detail-mobile@2x.webp 2x" type="image/webp">
@@ -178,13 +178,14 @@
                   <dt>Size</dt>
                   <dd>18” / 20”</dd>
                 </dl>
-                <a class="card__add-button button button--brown" href="basket.html">Add to cart</a>
+          <a class="modal-open modal-open--basket" href="basket.html">
+                <a class="card__add-button button button--brown modal-open modal-open--basket" href="basket.html">Add to cart</a>
                 <ul class="card__tabs-list">
                   <li>14 Day Returns</li>
                   <li>2-Year Warranty</li>
                   <li>Free Shipping</li>
                 </ul>
-              </li>
+              </a></li>
             </ul>
           </div>
         </div>
@@ -443,7 +444,7 @@
           <a class="login__form-link" href="#">Forgot your password?</a>
           <button class="button button--brown" type="submit">Log In</button>
 
-          <p class="login__form-text">Don’t have an account? <a href="#">Sign up</a></p>
+          <p>Don’t have an account? <a href="#">Sign up</a></p>
         </form>
       </div>
     </section>
@@ -467,7 +468,7 @@
             <!-- 1x: 84px; 2x: 168px -->
             <img src="img/card/necklace-detail-small-desktop@1x.jpg" srcset="img/card/necklace-detail-small-desktop@2x.jpg 2x" width="84" height="79" alt="Necklace detail">
           </picture>
-          <div class="basket-picture-title">
+          <div class="basket__picture-title">
             <h2>Gold Necklace</h2>
             <p>$ 115</p>
           </div>

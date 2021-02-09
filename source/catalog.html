@@ -98,7 +98,7 @@
       <div class="catalog__main-wrapper wrapper">
         <a class="catalog__filter-button button button--brown modal-open" href="filter.html">Filter</a>
 
-        <form class="catalog__form filter filter--nojs modal--filter" method="GET" action="catalog.html">
+        <form class="catalog__form filter filter--nojs filter--modal" method="GET" action="catalog.html">
           <button class="filter__modal-close" type="button" aria-label="Close modal window"></button>
           <fieldset class="filter__item filter__item--open">
             <button type="button">Product</button>
@@ -155,9 +155,9 @@
                 <button class="filter__line-pin filter__line-pin--min" type="button" aria-label="Increase"></button>
                 <button class="filter__line-pin filter__line-pin--max" type="button" aria-label="Decrease"></button>
 
-                <label class="filter__price-value filter__price-value--min" for="min-price">$ 55</label>
+                <label for="min-price">$ 55</label>
                 <input class="visually-hidden" id="min-price" type="number" name="min-price" min="0" max="210" value="55" aria-label="Min value of the price" />
-                <label class="filter__price-value filter__price-value--max" for="max-price">$ 155</label>
+                <label for="max-price">$ 155</label>
                 <input class="visually-hidden" id="max-price" type="number" name="max-price" min="0" max="210" value="155" aria-label="Max value of the price" />
               </div>
             </div>
@@ -413,7 +413,7 @@
       <div class="catalog__pagination pagination">
         <div class="pagination__wrapper wrapper">
           <a class="pagination__link pagination__link--left" href="#">Previous</a>
-          <ul class="pagination-list">
+          <ul class="pagination__list">
             <li>
               <a class="pagination__link pagination__link--active" href="#">1</a>
             </li>
@@ -536,7 +536,7 @@
           <a class="login__form-link" href="#">Forgot your password?</a>
           <button class="button button--brown" type="submit">Log In</button>
 
-          <p class="login__form-text">Don’t have an account? <a href="#">Sign up</a></p>
+          <p>Don’t have an account? <a href="#">Sign up</a></p>
         </form>
       </div>
     </section>
@@ -560,7 +560,7 @@
             <!-- 1x: 84px; 2x: 168px -->
             <img src="img/card/necklace-detail-small-desktop@1x.jpg" srcset="img/card/necklace-detail-small-desktop@2x.jpg 2x" width="84" height="79" alt="Necklace detail" />
           </picture>
-          <div class="basket-picture-title">
+          <div class="basket__picture-title">
             <h2>Gold Necklace</h2>
             <p>$ 115</p>
           </div>

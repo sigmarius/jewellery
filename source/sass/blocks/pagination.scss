@@ -10,7 +10,7 @@
   justify-content: space-between;
 }
 
-.pagination-list {
+.pagination__list {
   @include clear-list;
   margin-right: 33px;
   display: flex;
@@ -55,7 +55,7 @@
     justify-content: center;
   }
 
-  .pagination-list {
+  .pagination__list {
     margin-right: 0;
 
     li:not(:last-child) {

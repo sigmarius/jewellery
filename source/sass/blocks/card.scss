@@ -17,7 +17,7 @@
   flex-direction: column;
 }
 
-.card__pictures__item {
+.card__pictures-item {
   margin: 0 30px 30px 0;
 
   &:last-child {
@@ -168,7 +168,7 @@
     justify-content: space-between;
   }
 
-  .card__pictures__item {
+  .card__pictures-item {
     &--small {
       margin: 0;
     }
@@ -216,7 +216,7 @@
     counter-reset: pictureNumber;
   }
 
-  .card__pictures__item {
+  .card__pictures-item {
     &--small {
       display: none;
     }
