@@ -171,10 +171,20 @@
   .card__pictures-item {
     &--small {
       margin: 0;
+
+      img {
+        height: 129px;
+        object-fit: cover;
+      }
     }
 
     &--big {
       order: -1;
+
+      img {
+        height: 286px;
+        object-fit: cover;
+      }
     }
 
     &:last-child {
@@ -196,6 +206,10 @@
 
   .card__tabs-list {
     @include font(12px, 16px);
+  }
+
+  .card__add-button {
+    margin-bottom: 16px;
   }
 }
 
@@ -219,6 +233,10 @@
   .card__pictures-item {
     &--small {
       display: none;
+    }
+
+    &--big img {
+      height: 260px;
     }
 
     &:last-child {

@@ -107,7 +107,7 @@
 
   .blog__item {
     max-width: none;
-    margin-bottom: 52px;
+    margin-bottom: 50px;
 
     img {
       width: 339px;
@@ -121,6 +121,10 @@
       .blog__item-text {
         position: static;
         padding-top: 81px;
+      }
+
+      img {
+        height: 300px;
       }
     }
   }
@@ -150,8 +154,8 @@
     flex-direction: column;
 
     img {
-      width: 100%;
-      height: auto;
+      width: 290px;
+      height: 256px;
     }
 
     &:nth-child(2n) {
@@ -163,6 +167,10 @@
     &:nth-child(3n) {
       .blog__item-text {
         padding-top: 62px;
+      }
+
+      img {
+        height: 256px;
       }
     }
   }

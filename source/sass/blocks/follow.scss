@@ -1,5 +1,5 @@
 .follow__wrapper {
-  margin-bottom: 130px;
+  margin-bottom: 127px;
   text-align: center;
 
   h2 {
@@ -112,6 +112,11 @@
 
     &--second {
       padding-left: 0;
+
+      img {
+        height: 256px;
+        object-fit: cover;
+      }
     }
 
     &--third {
