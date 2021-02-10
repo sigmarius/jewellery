@@ -48,34 +48,35 @@
       outline-color: $white-light;
     }
   }
+}
 
-  button {
-    @include font(16px, 21px);
-    position: absolute;
-    top: 23px;
-    right: 0;
-    padding: 0;
-    color: $white;
-    background-color: transparent;
-    border: none;
+.page-footer__submit {
+  @include font(16px, 21px);
+  position: absolute;
+  top: 23px;
+  right: 0;
+  padding: 0;
+  color: $white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    stroke: $white;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white-light;
 
     svg {
-      stroke: $white;
+      stroke: $white-light;
     }
+  }
 
-    &:hover,
-    &:focus {
-      color: $white-light;
-
-      svg {
-        stroke: $white-light;
-      }
-    }
-
-    &:active {
-      color: $white-light;
-      opacity: 0.6;
-    }
+  &:active {
+    color: $white-light;
+    opacity: 0.6;
   }
 }
 

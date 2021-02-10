@@ -753,25 +753,27 @@ a {
       color: #9b9997; }
     .form--email input:focus {
       outline-color: rgba(255, 255, 255, 0.75); }
-  .form--email button {
-    font-size: 16px;
-    line-height: 21px;
-    position: absolute;
-    top: 23px;
-    right: 0;
-    padding: 0;
-    color: #ffffff;
-    background-color: transparent;
-    border: none; }
-    .form--email button svg {
-      stroke: #ffffff; }
-    .form--email button:hover, .form--email button:focus {
-      color: rgba(255, 255, 255, 0.75); }
-      .form--email button:hover svg, .form--email button:focus svg {
-        stroke: rgba(255, 255, 255, 0.75); }
-    .form--email button:active {
-      color: rgba(255, 255, 255, 0.75);
-      opacity: 0.6; }
+
+.page-footer__submit {
+  font-size: 16px;
+  line-height: 21px;
+  position: absolute;
+  top: 23px;
+  right: 0;
+  padding: 0;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer; }
+  .page-footer__submit svg {
+    stroke: #ffffff; }
+  .page-footer__submit:hover, .page-footer__submit:focus {
+    color: rgba(255, 255, 255, 0.75); }
+    .page-footer__submit:hover svg, .page-footer__submit:focus svg {
+      stroke: rgba(255, 255, 255, 0.75); }
+  .page-footer__submit:active {
+    color: rgba(255, 255, 255, 0.75);
+    opacity: 0.6; }
 
 @media (max-width: 1023px) {
   .form--search {
@@ -903,29 +905,29 @@ a {
   margin: 0;
   list-style: none;
   padding-top: 7px; }
+  .page-footer__social-list li {
+    margin-bottom: 24px; }
 
-.page-footer__social-item {
-  margin-bottom: 24px; }
-  .page-footer__social-item a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    color: #ffffff; }
-    .page-footer__social-item a:hover, .page-footer__social-item a:focus {
-      color: rgba(255, 255, 255, 0.75); }
-      .page-footer__social-item a:hover svg, .page-footer__social-item a:focus svg {
-        fill: rgba(255, 255, 255, 0.75); }
-    .page-footer__social-item a:active {
-      color: rgba(255, 255, 255, 0.75);
+.page-footer__social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ffffff; }
+  .page-footer__social-link:hover, .page-footer__social-link:focus {
+    color: rgba(255, 255, 255, 0.75); }
+    .page-footer__social-link:hover svg, .page-footer__social-link:focus svg {
+      fill: rgba(255, 255, 255, 0.75); }
+  .page-footer__social-link:active {
+    color: rgba(255, 255, 255, 0.75);
+    opacity: 0.6; }
+    .page-footer__social-link:active svg {
+      fill: rgba(255, 255, 255, 0.75);
       opacity: 0.6; }
-      .page-footer__social-item a:active svg {
-        fill: rgba(255, 255, 255, 0.75);
-        opacity: 0.6; }
-  .page-footer__social-item svg {
+  .page-footer__social-link svg {
     fill: #ffffff; }
-  .page-footer__social-item span {
+  .page-footer__social-link span {
     margin-left: 15px; }
-  .page-footer__social-item--fb {
+  .page-footer__social-link--fb {
     padding-left: 5px; }
 
 @media (max-width: 1023px) {
@@ -999,24 +1001,24 @@ a {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-  .page-footer__social-item {
-    margin: 0 30px 10px 0; }
-    .page-footer__social-item span {
-      display: none; }
-    .page-footer__social-item--fb {
-      padding-left: 0; }
-      .page-footer__social-item--fb svg {
-        width: 12px;
-        height: 21px; }
-    .page-footer__social-item--insta svg {
-      width: 20px;
+    .page-footer__social-list li {
+      margin: 0 30px 10px 0; }
+  .page-footer__social-link span {
+    display: none; }
+  .page-footer__social-link--fb {
+    padding-left: 0; }
+    .page-footer__social-link--fb svg {
+      width: 12px;
       height: 21px; }
-    .page-footer__social-item--pinterest svg {
-      width: 20px;
-      height: 21px; }
-    .page-footer__social-item--twiter svg {
-      width: 20px;
-      height: 18px; } }
+  .page-footer__social-link--insta svg {
+    width: 20px;
+    height: 21px; }
+  .page-footer__social-link--pinterest svg {
+    width: 20px;
+    height: 21px; }
+  .page-footer__social-link--twiter svg {
+    width: 20px;
+    height: 18px; } }
 
 .hero {
   min-height: 463px;
@@ -1537,7 +1539,7 @@ a {
 .faq__item--open p {
   display: block; }
 
-.faq__list--nojs .faq__item p {
+.faq__list--nojs p {
   display: block; }
 
 @media (max-width: 1023px) {
@@ -1894,7 +1896,7 @@ a {
   .filter__item:hover, .filter__item:focus-within {
     background-color: #f6f5f4; }
 
-.filter__item > button {
+.filter__item-button {
   font-size: 16px;
   line-height: 21px;
   position: relative;
@@ -1909,7 +1911,7 @@ a {
   border: none;
   outline: none;
   cursor: pointer; }
-  .filter__item > button::after {
+  .filter__item-button::after {
     position: absolute;
     right: 27px;
     top: 22px;
@@ -1950,7 +1952,7 @@ a {
 .filter__item--open .filter__content {
   display: block; }
 
-.filter__item--open > button::after {
+.filter__item--open .filter__item-button::after {
   top: 38px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
@@ -1958,7 +1960,7 @@ a {
 .filter--nojs .filter__content {
   display: block; }
 
-.filter--nojs .filter__item > button::after {
+.filter--nojs .filter__item-button::after {
   top: 38px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
@@ -2046,16 +2048,16 @@ a {
       border-bottom: 1px solid #a87b62; }
     .filter__item:last-of-type {
       margin-bottom: 40px; }
-  .filter__item > button {
+  .filter__item-button {
     font-size: 18px;
     line-height: 23px;
     padding: 33px 23px 35px; }
-    .filter__item > button::after {
+    .filter__item-button::after {
       right: 43px;
       top: 40px;
       width: 23px;
       height: 12px; }
-  .filter__item:first-of-type > button {
+  .filter__item-button:first-of-type {
     padding: 33px 23px 25px; }
   .filter__list {
     padding-left: 60px; }
@@ -2101,14 +2103,14 @@ a {
     right: -10px; }
   .filter__item:last-of-type {
     margin-bottom: 30px; }
-  .filter__item > button {
+  .filter__item-button {
     padding: 24px 20px; }
-    .filter__item > button::after {
+    .filter__item-button::after {
       right: 18px;
       top: 25px; }
-  .filter__item--open > button::after {
+  .filter__item--open .filter__item-button::after {
     top: 38px; }
-  .filter__item:first-of-type > button {
+  .filter__item-button:first-of-type {
     padding: 29px 20px 25px; }
   .filter__list {
     padding-left: 58px; }

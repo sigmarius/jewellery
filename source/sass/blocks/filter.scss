@@ -21,7 +21,7 @@
   }
 }
 
-.filter__item > button {
+.filter__item-button {
   @include font(16px, 21px);
   position: relative;
   width: 100%;
@@ -93,7 +93,7 @@
     display: block;
   }
 
-  & > button::after {
+  .filter__item-button::after {
     top: 38px;
     transform: rotate(180deg);
   }
@@ -104,11 +104,9 @@
     display: block;
   }
 
-  .filter__item {
-    & > button::after {
-      top: 38px;
-      transform: rotate(180deg);
-    }
+  .filter__item-button::after {
+    top: 38px;
+    transform: rotate(180deg);
   }
 }
 
@@ -227,7 +225,7 @@
     }
   }
 
-  .filter__item > button {
+  .filter__item-button {
     @include font(18px, 23px);
     padding: 33px 23px 35px;
 
@@ -239,7 +237,7 @@
     }
   }
 
-  .filter__item:first-of-type > button {
+  .filter__item-button:first-of-type {
     padding: 33px 23px 25px;
   }
 
@@ -321,7 +319,7 @@
     }
   }
 
-  .filter__item > button {
+  .filter__item-button {
     padding: 24px 20px;
 
     &::after {
@@ -331,12 +329,12 @@
   }
 
   .filter__item--open {
-    & > button::after {
+    .filter__item-button::after {
       top: 38px;
     }
   }
 
-  .filter__item:first-of-type > button {
+  .filter__item-button:first-of-type {
     padding: 29px 20px 25px;
   }
 

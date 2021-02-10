@@ -66,32 +66,32 @@
 .page-footer__social-list {
   @include clear-list;
   padding-top: 7px;
+
+  li {
+    margin-bottom: 24px;
+  }
 }
 
-.page-footer__social-item {
-  margin-bottom: 24px;
+.page-footer__social-link {
+  display: flex;
+  color: $white;
 
-  a {
-    display: flex;
-    color: $white;
+  &:hover,
+  &:focus {
+    color: $white-light;
 
-    &:hover,
-    &:focus {
-      color: $white-light;
-
-      svg {
-        fill: $white-light;
-      }
+    svg {
+      fill: $white-light;
     }
+  }
 
-    &:active {
-      color: $white-light;
+  &:active {
+    color: $white-light;
+    opacity: 0.6;
+
+    svg {
+      fill: $white-light;
       opacity: 0.6;
-
-      svg {
-        fill: $white-light;
-        opacity: 0.6;
-      }
     }
   }
 
@@ -197,11 +197,13 @@
     width: 85%;
     display: flex;
     flex-wrap: wrap;
+
+    li {
+      margin: 0 30px 10px 0;
+    }
   }
 
-  .page-footer__social-item {
-    margin: 0 30px 10px 0;
-
+  .page-footer__social-link {
     span {
       display: none;
     }
