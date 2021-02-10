@@ -58,7 +58,7 @@
     var modalLogin = document.querySelector('.modal--login');
     var modalLoginClose = document.querySelector('.modal__close--login');
     var loginForm = document.querySelector('.login__form');
-    var modalBasketOpen = document.querySelector('.modal-open--basket');
+    var modalBasketOpen = document.querySelectorAll('.modal-open--basket');
     var modalBasket = document.querySelector('.modal--basket');
     var modalBasketClose = document.querySelector('.modal__close--basket');
     var modalFilterOpen = document.querySelector('.catalog__filter-button');
@@ -79,9 +79,12 @@
             document.addEventListener('keydown', escapeClickHandler);
         } else {
             body.classList.remove('overlay--open');
-            document.querySelector('.modal--show').classList.remove('modal--show');
+            document.querySelector('.modal-show').classList.remove('modal-show');
             document.querySelector('.overlay').remove();
             document.removeEventListener('keydowm', escapeClickHandler);
+            if (modalFilter && modalFilterClose) {
+                modalFilter.classList.remove('filter--modal-open');
+            }
         }
     };
     var escapeClickHandler = function (evt) {
@@ -101,7 +104,7 @@
         });
     };
     var modalOpenHandler = function (modal) {
-        modal.classList.add('modal--show');
+        modal.classList.add('modal-show');
         createOverlay();
         setVisible(true);
     };
@@ -134,10 +137,12 @@
         });
     }
     if (modalBasketOpen && modalBasket) {
-        modalBasketOpen.addEventListener('click', function (evt) {
-            evt.preventDefault();
-            modalOpenHandler(modalBasket);
-        });
+        for (var i = 0; i < modalBasketOpen.length; i++) {
+            modalBasketOpen[i].addEventListener('click', function (evt) {
+                evt.preventDefault();
+                modalOpenHandler(modalBasket);
+            });
+        }
     }
     if (modalBasketClose) {
         modalBasketClose.addEventListener('click', modalCloseHandler);
@@ -146,6 +151,7 @@
         modalFilterOpen.addEventListener('click', function (evt) {
             evt.preventDefault();
             modalOpenHandler(modalFilter);
+            modalFilter.classList.add('filter--modal-open');
         });
     }
     if (modalFilterClose) {
@@ -228,18 +234,20 @@
         list.style.transform = 'translateX(' + transform + '%)';
     };
     var setMobileTouch = function () {
-        list.addEventListener('touchstart', function (evt) {
-            startX = evt.changedTouches[0].clientX;
-        });
-        list.addEventListener('touchend', function (evt) {
-            var endX = evt.changedTouches[0].clientX;
-            var deltaX = endX - startX;
-            if (deltaX > 50) {
-                buttonRightClickHandler();
-            } else if (deltaX < -50) {
-                buttonLeftClickHandler();
-            }
-        });
+        if (list) {
+            list.addEventListener('touchstart', function (evt) {
+                startX = evt.changedTouches[0].clientX;
+            });
+            list.addEventListener('touchend', function (evt) {
+                var endX = evt.changedTouches[0].clientX;
+                var deltaX = endX - startX;
+                if (deltaX > 50) {
+                    buttonRightClickHandler();
+                } else if (deltaX < -50) {
+                    buttonLeftClickHandler();
+                }
+            });
+        }
     };
     if (buttonLeft && buttonRight) {
         buttonRight.addEventListener('click', buttonRightClickHandler);
