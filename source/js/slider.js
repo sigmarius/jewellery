@@ -70,12 +70,12 @@
   var buttonRightClickHandler = function () {
     if (positionLeftItem + count >= position.getMax) {
       return;
-    } else {
-      positionLeftItem = positionLeftItem + count;
-
-      transform -= step * count;
-      list.style.transform = 'translateX(' + transform + '%)';
     }
+
+    positionLeftItem = positionLeftItem + count;
+
+    transform -= step * count;
+    list.style.transform = 'translateX(' + transform + '%)';
   };
 
   var buttonLeftClickHandler = function () {

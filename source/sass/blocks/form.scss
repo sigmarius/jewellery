@@ -50,36 +50,6 @@
   }
 }
 
-.page-footer__submit {
-  @include font(16px, 21px);
-  position: absolute;
-  top: 23px;
-  right: 0;
-  padding: 0;
-  color: $white;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-
-  svg {
-    stroke: $white;
-  }
-
-  &:hover,
-  &:focus {
-    color: $white-light;
-
-    svg {
-      stroke: $white-light;
-    }
-  }
-
-  &:active {
-    color: $white-light;
-    opacity: 0.6;
-  }
-}
-
 @media (max-width: $tablet) {
   .form--search {
     position: relative;

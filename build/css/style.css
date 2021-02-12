@@ -407,14 +407,6 @@ a {
   .modal--nojs {
     display: block; }
 
-.modal-show {
-  position: fixed;
-  left: 50%;
-  z-index: 2;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  display: block; }
-
 .modal__close {
   position: absolute;
   top: 18px;
@@ -436,6 +428,14 @@ a {
       right: 15px;
       width: 14px;
       height: 14px; } }
+
+.modal-show {
+  position: fixed;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block; }
 
 .overlay {
   position: fixed;
@@ -754,27 +754,6 @@ a {
     .form--email input:focus {
       outline-color: rgba(255, 255, 255, 0.75); }
 
-.page-footer__submit {
-  font-size: 16px;
-  line-height: 21px;
-  position: absolute;
-  top: 23px;
-  right: 0;
-  padding: 0;
-  color: #ffffff;
-  background-color: transparent;
-  border: none;
-  cursor: pointer; }
-  .page-footer__submit svg {
-    stroke: #ffffff; }
-  .page-footer__submit:hover, .page-footer__submit:focus {
-    color: rgba(255, 255, 255, 0.75); }
-    .page-footer__submit:hover svg, .page-footer__submit:focus svg {
-      stroke: rgba(255, 255, 255, 0.75); }
-  .page-footer__submit:active {
-    color: rgba(255, 255, 255, 0.75);
-    opacity: 0.6; }
-
 @media (max-width: 1023px) {
   .form--search {
     position: relative; }
@@ -869,6 +848,27 @@ a {
     line-height: 21px;
     font-weight: 400;
     color: #9b9997; }
+
+.page-footer__submit {
+  font-size: 16px;
+  line-height: 21px;
+  position: absolute;
+  top: 23px;
+  right: 0;
+  padding: 0;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer; }
+  .page-footer__submit svg {
+    stroke: #ffffff; }
+  .page-footer__submit:hover, .page-footer__submit:focus {
+    color: rgba(255, 255, 255, 0.75); }
+    .page-footer__submit:hover svg, .page-footer__submit:focus svg {
+      stroke: rgba(255, 255, 255, 0.75); }
+  .page-footer__submit:active {
+    color: rgba(255, 255, 255, 0.75);
+    opacity: 0.6; }
 
 .page-footer__links {
   width: 45%;
@@ -2724,23 +2724,6 @@ a {
 .login__form button {
   margin-bottom: 15px; }
 
-.login__form p {
-  margin: 0;
-  margin-bottom: 0;
-  padding: 0;
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
-  color: #9b9997; }
-  .login__form p a {
-    color: #1d1613; }
-    .login__form p a:hover, .login__form p a:focus {
-      color: #a87b62;
-      outline-color: #a87b62; }
-    .login__form p a:active {
-      color: #9b9997;
-      outline-color: #a87b62; }
-
 .login__form-link {
   font-size: 12px;
   line-height: 18px;
@@ -2755,6 +2738,23 @@ a {
   .login__form-link:active {
     color: #a87b62;
     outline-color: #a87b62; }
+
+.login__form-text {
+  margin: 0;
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #9b9997; }
+  .login__form-text a {
+    color: #1d1613; }
+    .login__form-text a:hover, .login__form-text a:focus {
+      color: #a87b62;
+      outline-color: #a87b62; }
+    .login__form-text a:active {
+      color: #9b9997;
+      outline-color: #a87b62; }
 
 @media (max-width: 1023px) {
   .login {

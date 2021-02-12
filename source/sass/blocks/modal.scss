@@ -7,14 +7,6 @@
   }
 }
 
-.modal-show {
-  position: fixed;
-  left: 50%;
-  z-index: 2;
-  transform: translateX(-50%);
-  display: block;
-}
-
 .modal__close {
   position: absolute;
   top: 18px;

@@ -55,28 +55,6 @@
   button {
     margin-bottom: 15px;
   }
-
-  p {
-    @include clear-content(0);
-    @include font(14px, 21px);
-    text-align: center;
-    color: $grey;
-
-    a {
-      color: $dark;
-
-      &:hover,
-      &:focus {
-        color: $brown;
-        outline-color: $brown;
-      }
-
-      &:active {
-        color: $grey;
-        outline-color: $brown;
-      }
-    }
-  }
 }
 
 .login__form-link {
@@ -96,6 +74,28 @@
   &:active {
     color: $brown;
     outline-color: $brown;
+  }
+}
+
+.login__form-text {
+  @include clear-content(0);
+  @include font(14px, 21px);
+  text-align: center;
+  color: $grey;
+
+  a {
+    color: $dark;
+
+    &:hover,
+    &:focus {
+      color: $brown;
+      outline-color: $brown;
+    }
+
+    &:active {
+      color: $grey;
+      outline-color: $brown;
+    }
   }
 }
 

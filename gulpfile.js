@@ -76,8 +76,7 @@ gulp.task("images", function() {
       imagemin.svgo()
     ]))
 
-    .pipe(gulp.dest("source/img"));
-
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("webp", function () {
@@ -116,7 +115,7 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "vendor-scripts", "main-scripts", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "images", "vendor-scripts", "main-scripts", "html"));
 gulp.task("start", gulp.series("build", "server"));
 
 function deploy(cb) {
