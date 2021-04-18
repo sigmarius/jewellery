@@ -1697,13 +1697,16 @@ a {
     .follow__item img {
       max-width: 100%; }
     .follow__item--first {
-      width: 45%; }
+      width: 45%;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
       .follow__item--first picture:last-of-type img {
         padding-top: 10px; }
     .follow__item--second {
       padding-left: 0; }
       .follow__item--second img {
-        height: 256px;
+        height: 226px;
         -o-object-fit: cover;
            object-fit: cover; }
     .follow__item--third {

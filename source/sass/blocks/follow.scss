@@ -104,6 +104,7 @@
 
     &--first {
       width: 45%;
+      justify-content: flex-start;
 
       picture:last-of-type img {
         padding-top: 10px;
@@ -114,7 +115,7 @@
       padding-left: 0;
 
       img {
-        height: 256px;
+        height: 226px;
         object-fit: cover;
       }
     }
